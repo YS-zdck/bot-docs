@@ -1,18 +1,11 @@
-// 注意：需要在dev前初始化内网api文档
-const apiConfig = require('../develop/api/config');
 const apiConfig231017 = require('../develop/api-v2/config');
-const nodesdkConfig = require('../develop/nodesdk/config');
-const pythonsdkConfig = require('../develop/pythonsdk/config');
-const gosdkConfig = require('../develop/gosdk/config');
-const newfeatureConfig = require('../newfeature/config');
-const commonConfig = require('./common');
 
-const base = '/wiki/';
+const base = '/';
 
 module.exports = ctx => ({
   base,
   configureWebpack: (config, isServer) => {
-    config.output.publicPath = ctx.isProd ? commonConfig.cdnBase + commonConfig.cdnPath : base;
+    config.output.publicPath = base;
   },
   title: ' QQ机器人文档',
   description:
@@ -100,7 +93,7 @@ module.exports = ctx => ({
       },
     ],
     [require('./plugins/vuepress-plugin-contributors/index'), {
-      docsRepo: 'tencent-connect/bot-docs',
+      docsRepo: 'YS-zdck/bot-docs',
       docsBranch: 'main',
       docsDir: 'docs',
       label: '贡献者🎉',
@@ -124,56 +117,29 @@ module.exports = ctx => ({
         text: 'API文档',
         link: '/develop/api-v2/',
       },
-      {
-        text: 'SDK文档',
-        items: [
-          {
-            text: 'NodeSDK',
-            link: 'https://github.com/tencent-connect/bot-node-sdk',
-          },
-          {
-            text: 'PythonSDK',
-            link: 'https://github.com/tencent-connect/botpy',
-          },
-          {
-            text: 'GoSDK',
-            link: 'https://github.com/tencent-connect/botgo',
-          },
-        ],
-      },
-      {
-        text: '运营规范',
-        link: '/business/',
-      },
+
+
+
+
       {
         text: '机器人平台',
         link: 'https://bot.q.qq.com/open',
       },
-      // {
-      //   text: '新特性',
-      //   link: '/newfeature/',
-      // },
-      newfeatureConfig.nav,
       {
         text: '更新日志',
         link: '/changelog/',
       },
     ],
-    repo: 'tencent-connect/bot-docs',
+    repo: 'YS-zdck/bot-docs',
     editLinks: true,
     editLinkText: '在GitHub上编辑此页',
     docsDir: 'docs',
     // 不展示编码的页面
-    disableRoutes: ['/develop/api/','/changelog/','/develop/nodesdk/changelog/', '/develop/pythonsdk/changelog/'],
+    disableRoutes: ['/develop/api/'],
     docsBranch: 'main',
     sidebar: {
       // '/develop/api/': convertSummary('./docs/develop/api/SUMMARY-PUBLIC.md', hiddenApi, 1, true),
       ...apiConfig231017.sidebar,
-      ...apiConfig.sidebar,
-      ...nodesdkConfig.sidebar,
-      ...pythonsdkConfig.sidebar,
-      ...gosdkConfig.sidebar,
-      ...newfeatureConfig.sidebar,
       '/': [''],
     },
 

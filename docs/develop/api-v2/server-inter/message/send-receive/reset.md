@@ -1,13 +1,5 @@
 # 撤回消息
 
-<!-- ## 🚫单聊
-
-[暂不对外开放]
-
-## 🚫群聊
-
-[暂不对外开放]，管理员身份可撤回的加多消息 -->
-
 ## 单聊
 
 ### 接口
@@ -18,7 +10,7 @@ DELETE /v2/users/{openid}/messages/{message_id}
 
 ### 功能描述
 
-用于撤回机器人发送给当前用户 `openid` 的消息 `message_id`，发送超出2分钟的消息不可撤回
+用于撤回机器人发送给当前用户 `openid` 的消息 `message_id`。发送超出 **2 分钟** 的消息不可撤回。
 
 ### Content-Type
 
@@ -52,7 +44,9 @@ DELETE /v2/groups/{group_openid}/messages/{message_id}
 
 ### 功能描述
 
-用于撤回机器人发送在当前群 `group_openid` 的消息 `message_id`，发送超出2分钟的消息不可撤回
+可用于撤回机器人在当前群 `group_openid` 发送的消息，`message_id` 可通过消息发送成功时获得。消息发送超出 **2 分钟** 不可撤回。
+
+当机器人被群主设置为群管理员时，还可撤回成员发送的消息。成员消息的 `message_id` 可通过 `GROUP_MESSAGE_CREATE`、`GROUP_MESSAGE_AT_CREATE` 事件获取。
 
 ### Content-Type
 

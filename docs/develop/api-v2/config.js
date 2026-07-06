@@ -253,6 +253,7 @@ module.exports = {
                 "sidebarDepth": 1,
                 "path": "/develop/api-v2/server-inter/user/manage/",
                 "children": [
+                  "server-inter/user/share_url.md",
                   "server-inter/user/manage/event.md",
                 ]
               }

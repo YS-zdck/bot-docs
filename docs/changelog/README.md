@@ -4,6 +4,30 @@ sidebar: auto
 
 # 文档更新日志
 
+## 2026-07-06
+
+#### 新增接口/事件文档
+
+* 群成员加入群聊事件 `GROUP_MEMBER_ADD` — [群管理事件](/develop/api-v2/server-inter/group/manage/event)
+* 群成员退出群聊事件 `GROUP_MEMBER_REMOVE` — [群管理事件](/develop/api-v2/server-inter/group/manage/event)
+* 群聊全量消息事件 `GROUP_MESSAGE_CREATE`（群主授权后可接收群内所有消息）— [消息收发事件](/develop/api-v2/server-inter/message/send-receive/event)
+* 机器人分享链接接口 `POST /v2/generate_url_link`，支持 `callback_data` 归因追踪 — [机器人链接](/develop/api-v2/server-inter/user/share_url)
+
+#### 修改接口/事件文档
+
+* [消息发送](/develop/api-v2/server-inter/message/send-receive/send)：更新群场景主动推送全量开放说明；新增互动召回消息能力，`is_wakeup` 字段；更新频控规则
+* [富媒体上传](/develop/api-v2/server-inter/message/send-receive/rich-media)：精简文档结构，明确 `file_info` 有效期及单聊/群聊隔离规则
+* [消息撤回](/develop/api-v2/server-inter/message/send-receive/reset)：精简接口说明
+* [用户事件](/develop/api-v2/server-inter/user/manage/event)：更新添加好友场景值说明
+* [帖子事件](/develop/api-v2/server-inter/channel/content/forum/open_forum)、[事件推送](/develop/api-v2/dev-prepare/interface-framework/event-emit)：文档微调
+
+#### 移除文档
+
+* 移除 NodeSDK、PythonSDK、GoSDK 使用文档
+* 移除新版特性（v5~v11）文档
+* 移除运营规范文档
+* 仓库地址迁移至 [YS-zdck/bot-docs](https://github.com/YS-zdck/bot-docs)
+
 ## 2022-06-17
 
 * feat: 完善ws事件中Message数据的构建 ([9564cb2](https://github.com/tencent-connect/botpy/pull/103/commits/9564cb2858833fb8de442123226fe7a46f743fe6))

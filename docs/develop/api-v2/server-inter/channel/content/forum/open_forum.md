@@ -1,6 +1,6 @@
 # 开放论坛事件对象(OpenForumEvent)
 
-## OEPN_FORUM_EVENT（intents OPEN_FORUM_EVENT）
+## OPEN_FORUM_EVENT（intents OPEN_FORUM_EVENT）
 
 **发送时机**
 - 用户在话题子频道内发帖、评论、回复评论时产生该事件

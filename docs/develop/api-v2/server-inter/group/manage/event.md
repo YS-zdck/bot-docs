@@ -187,10 +187,105 @@
 
 ```json
 {
-
 	"group_openid": "C9F778FE6ADF9D1D1DBE395BF744A33A",
 	"op_member_openid": "E4F4AEA33253A2797FB897C50B81D7ED",
 	"timestamp": 1699240477
+}
+```
+
+## 群成员加入群聊
+
+- **基本概况**
+
+<table>
+	<tr>
+	  <th colspan="2">基本</th>
+	</tr>
+  <tr>
+    <td>intents</td>
+    <td>1<<24</td>
+	</tr>
+  <tr>
+    <td>事件类型</td>
+    <td>GROUP_MEMBER_ADD</td>
+	</tr>
+	<tr>
+    <td>触发场景</td>
+    <td>成员加入群聊时触发</td>
+	</tr>
+  <tr>
+    <td>权限要求</td>
+    <td>暂无</td>
+	</tr>
+	<tr>
+    <td>推送方式</td>
+    <td>Websocket</td>
+	</tr>
+</table>
+
+- **事件字段**
+
+| **属性** | **类型** | **说明** |
+| --- | --- | --- |
+| timestamp | int | 加入的时间戳 |
+| group_openid | string | 群的 openid |
+| member_openid | string | 加入成员的 openid |
+
+- **事件示例**
+
+```json
+{
+	"group_openid": "C9F778FE6ADF9D1D1DBE395BF744A33A",
+	"member_openid": "E4F4AEA33253A2797FB897C50B81D7ED",
+	"timestamp": 1699240248
+}
+```
+
+## 群成员退出群聊
+
+- **基本概况**
+
+<table>
+	<tr>
+	  <th colspan="2">基本</th>
+	</tr>
+  <tr>
+    <td>intents</td>
+    <td>1<<24</td>
+	</tr>
+  <tr>
+    <td>事件类型</td>
+    <td>GROUP_MEMBER_REMOVE</td>
+	</tr>
+	<tr>
+    <td>触发场景</td>
+    <td>成员退出群聊时触发</td>
+	</tr>
+  <tr>
+    <td>权限要求</td>
+    <td>暂无</td>
+	</tr>
+	<tr>
+    <td>推送方式</td>
+    <td>Websocket</td>
+	</tr>
+</table>
+
+- **事件字段**
+
+| **属性** | **类型** | **说明** |
+| --- | --- | --- |
+| timestamp | int | 退出的时间戳 |
+| group_openid | string | 群的 openid |
+| member_openid | string | 退出成员的 openid |
+
+- **事件示例**
+
+```json
+{
+	"group_openid": "C9F778FE6ADF9D1D1DBE395BF744A33A",
+	"member_openid": "E4F4AEA33253A2797FB897C50B81D7ED",
+	"timestamp": 1699240426
 }
 ```
 
