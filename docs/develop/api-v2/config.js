@@ -237,6 +237,7 @@ module.exports = {
                 "path": "/develop/api-v2/server-inter/group/manage/",
                 "children": [
                   "server-inter/group/manage/event.md",
+                  "server-inter/group/manage/get-member.md",
                 ]
               }
             ]

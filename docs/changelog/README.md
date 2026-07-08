@@ -12,6 +12,7 @@ sidebar: auto
 * 群成员退出群聊事件 `GROUP_MEMBER_REMOVE` — [群管理事件](/develop/api-v2/server-inter/group/manage/event)
 * 群聊全量消息事件 `GROUP_MESSAGE_CREATE`（群主授权后可接收群内所有消息）— [消息收发事件](/develop/api-v2/server-inter/message/send-receive/event)
 * 机器人分享链接接口 `POST /v2/generate_url_link`，支持 `callback_data` 归因追踪 — [机器人链接](/develop/api-v2/server-inter/user/share_url)
+* 获取群成员详情接口 `GET /v2/groups/{group_id}/members/{member_id}`，返回群昵称、角色、加入时间等信息 — [获取群成员详情](/develop/api-v2/server-inter/group/manage/get-member)
 
 #### 修改接口/事件文档
 

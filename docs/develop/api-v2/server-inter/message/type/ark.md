@@ -37,7 +37,7 @@
 // 发送CASE
 {
   "ark": {
-    "template_id": 1,
+    "template_id": 23,
     "kv": [
       {
         "key": "#DESC#",
