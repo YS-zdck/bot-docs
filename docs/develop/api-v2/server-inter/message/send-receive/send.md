@@ -91,16 +91,40 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 | **属性** | **类型** | **必填** | **说明** |
 | --- | --- | --- | --- |
 | content | string | 否 | 文本内容 |
-| msg_type | int | 是 | 消息类型：0 是文本，2 是 markdown， 3 ark，4 embed，7 media 富媒体 |
+| msg_type | int | 是 | 消息类型：0 是文本，2 是 markdown，3 ark，4 embed，6 input_notify 输入状态通知，7 media 富媒体 |
 | markdown | object | 否 | [Markdown](../type/markdown.md#数据结构与协议)对象 |
 | keyboard | object | 否 | [Keyboard](../trans/msg-btn.md#数据结构与协议)对象 |
 | ark | object | 否 | [Ark](../type/ark.md#数据结构与协议)对象 |
 | media | object | 否 | [富媒体单聊](./rich-media.md#用于单聊)的file_info |
+| input_notify | object | 否 | 输入状态通知对象，仅当 msg_type = 6 时使用。 |
 | message_reference | object | 否 | 【暂未支持】消息引用 |
 | event_id | string | 否 | 前置收到的事件 ID，用于发送被动消息，支持事件："INTERACTION_CREATE"、"C2C_MSG_RECEIVE"、"FRIEND_ADD"|
 | msg_id | string | 否 | 前置收到的用户发送过来的消息 ID，用于发送被动（回复）消息 |
 | msg_seq	| int	| 否 | 回复消息的序号，与 msg_id 联合使用，避免相同消息id回复重复发送，不填默认是1。相同的 msg_id + msg_seq 重复发送会失败。 |
 | is_wakeup | bool | 否 | 互动召回消息标记，与 msg_id、event_id 互斥 |
+
+- **input_notify 对象**
+
+| **属性** | **类型** | **必填** | **说明** |
+| --- | --- | --- | --- |
+| input_type | int | 是 | 输入状态类型。当前使用 `1`，表示“正在输入”。 |
+| input_second | int | 是 | 输入状态持续时间，单位为秒。例如传 `60` 表示客户端展示约 60 秒“正在输入”状态。 |
+
+- **输入状态通知示例**
+
+请求数据包
+
+```json
+{
+  "msg_type": 6,
+  "input_notify": {
+    "input_type": 1,
+    "input_second": 60
+  },
+  "msg_seq": 123,
+  "msg_id": "msg_id"
+}
+```
 
 
 - **返回参数**
