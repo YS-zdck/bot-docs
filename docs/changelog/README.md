@@ -4,6 +4,13 @@ sidebar: auto
 
 # 文档更新日志
 
+## 2026-07-10
+
+#### 新增接口文档
+
+* 单聊流式消息接口 `POST /v2/users/{openid}/stream_messages` — [流式消息](/develop/api-v2/server-inter/message/send-receive/streaming)
+* 富媒体分片上传接口 `POST /v2/users/{openid}/upload_prepare`、`POST /v2/groups/{group_openid}/upload_prepare`、`POST /v2/users/{openid}/upload_part_finish`、`POST /v2/groups/{group_openid}/upload_part_finish` — [分片上传](/develop/api-v2/server-inter/message/send-receive/chunked-upload)
+
 ## 2026-07-06
 
 #### 新增接口/事件文档

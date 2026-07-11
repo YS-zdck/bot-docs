@@ -72,6 +72,7 @@ module.exports = {
                   "server-inter/message/send-receive/send.md",
                   "server-inter/message/send-receive/streaming.md",
                   "server-inter/message/send-receive/rich-media.md",
+                  "server-inter/message/send-receive/chunked-upload.md",
                   "server-inter/message/send-receive/reset.md",
                   "server-inter/message/send-receive/event.md",
                 ]
