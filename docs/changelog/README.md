@@ -4,7 +4,23 @@ sidebar: auto
 
 # 文档更新日志
 
+## 2026-07-22
+
+#### 新增接口/事件文档
+
+* 获取群基础信息接口 `GET /v2/groups/{group_openid}/info` — [获取群基础信息](/develop/api-v2/server-inter/group/manage/get-group-info)
+* 获取机器人群内状态接口 `GET /v2/groups/{group_openid}/bot_state` — [获取机器人群内状态](/develop/api-v2/server-inter/group/manage/get-bot-state)
+* 订阅消息授权状态变更事件 `SUBSCRIBE_MESSAGE_STATUS` — [订阅消息授权状态变更](/develop/api-v2/server-inter/user/manage/subscribe-message-status)
+
+#### 修改接口文档
+
+* [消息发送](/develop/api-v2/server-inter/message/send-receive/send)：补充 `msg_type=6` 输入状态通知及 `input_notify` 参数说明
+* [富媒体上传](/develop/api-v2/server-inter/message/send-receive/rich-media)：补充 URL 上传与分片合并方式、`srv_send_msg`、`raw_url`、接口频率及错误码
+* [分片上传](/develop/api-v2/server-inter/message/send-receive/chunked-upload)：接口路径参数统一为 `{user_id}`、`{group_id}`，修正分片序号、字段类型并补充上传配置、频率及错误码
+* [消息撤回](/develop/api-v2/server-inter/message/send-receive/reset)：修正群消息事件名为 `GROUP_AT_MESSAGE_CREATE`
+* [创建子频道](/develop/api-v2/server-inter/channel/manage/channel/post_channels)、[修改子频道](/develop/api-v2/server-inter/channel/manage/channel/patch_channel)：修正请求示例中的非请求字段
 ## 2026-07-10
+
 
 #### 新增接口文档
 

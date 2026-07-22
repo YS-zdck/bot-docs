@@ -14,11 +14,15 @@
 	</tr>
 	<tr>
     <td>HTTP URL</td>
-    <td>/v2/users/{openid}/files</td>
+    <td>/v2/users/{user_openid}/files</td>
 	</tr>
 	<tr>
     <td>HTTP Method</td>
     <td>POST</td>
+	</tr>
+	<tr>
+    <td>接口频率限制</td>
+    <td>50 QPS</td>
 	</tr>
 </table>
 
@@ -26,16 +30,17 @@
 
 | **属性** | **类型** | **必填** | **说明** |
 | --- | --- | --- | --- |
-| openid | string | 是 | QQ 用户的 openid，可在各类事件中获得。 |
+| user_openid | string | 是 | 用户 OpenID |
 
 - **请求参数**
 
 | **属性** | **类型** | **必填** | **说明** |
 | --- | --- | --- | --- |
-| file_type | int | 是 | 媒体类型：1 图片（png/jpg），2 视频（mp4），3 语音（silk/wav/mp3/flac），4 文件 |
-| url | string | 是 | 需要发送媒体资源的url |
-| file_data | - | 否 | base64 二进制数据（备选上传方式） |
-| upload_id | string | 否 | 分片上传任务 ID。通过[分片上传](./chunked-upload.md)获取，并在所有分片完成后传入 |
+| file_type | int | 否 | 媒体类型：1 图片（png/jpg），2 视频（mp4），3 语音（silk），4 文件 |
+| url | string | 否 | 媒体资源 URL，需以 http 开头。使用分片上传合并时可为空 |
+| srv_send_msg | bool | 否 | `true` 直接发送消息并占用主动消息频次；`false` 仅返回 `file_info` |
+| file_name | string | 否 | 文件名 |
+| upload_id | string | 否 | 分片上传任务 ID。传入后走分片上传合并流程，此时 `url` 可为空 |
 
 - **返回参数**
 
@@ -44,9 +49,21 @@
 | file_uuid | string | 文件 ID |
 | file_info | string | 文件信息，用于发消息接口的 media 字段使用 |
 | ttl | int | 有效期（秒），到期后 file_info 失效，当等于 0 时表示可长期使用 |
+| id | string | 消息 ID，仅 `srv_send_msg=true` 时返回 |
+| raw_url | string | 文件下载链接，仅分片合并且媒体类型为图片、视频或语音时返回 |
 
 - **错误码**
 
+| **错误码** | **说明** | **排查建议** |
+| --- | --- | --- |
+| 850018 | 群被禁言或者机器人被禁言 | 请检查机器人是否被禁言 |
+| 850019 | 不支持的文件格式 | 请检查 `file_type` 是否正确 |
+| 850026 | 下载原始文件失败 | 请检查 URL 是否可访问或重试 |
+| 850031 | 上传文件超过大小限制 | 请减小文件大小 |
+| 850027 | 发送数据超时 | 请稍后重试 |
+| 10000 | 不支持的操作 | 请检查请求参数 |
+| 40093001 | 文件上传失败，请重试 | 请重新上传文件或分片 |
+| 40093002 | 超过当天发送文件容量上限 | 请次日重试或减少文件大小 |
 
 ## 用于群聊
 
@@ -64,6 +81,10 @@
     <td>HTTP Method</td>
     <td>POST</td>
 	</tr>
+	<tr>
+    <td>接口频率限制</td>
+    <td>50 QPS</td>
+	</tr>
 </table>
 
 - **路径参数**
@@ -76,10 +97,11 @@
 
 | **属性** | **类型** | **必填** | **说明** |
 | --- | --- | --- | --- |
-| file_type | int | 是 | 媒体类型：1 图片（png/jpg），2 视频（mp4），3 语音（silk/wav/mp3/flac），4 文件 |
-| url | string | 是 | 需要发送媒体资源的url |
-| file_data | - | 否 | base64 二进制数据（备选上传方式） |
-| upload_id | string | 否 | 分片上传任务 ID。通过[分片上传](./chunked-upload.md)获取，并在所有分片完成后传入 |
+| file_type | int | 否 | 媒体类型：1 图片（png/jpg），2 视频（mp4），3 语音（silk），4 文件 |
+| url | string | 否 | 媒体资源 URL，需以 http 开头。使用分片上传合并时可为空 |
+| srv_send_msg | bool | 否 | `true` 直接发送消息并占用主动消息频次；`false` 仅返回 `file_info` |
+| file_name | string | 否 | 文件名 |
+| upload_id | string | 否 | 分片上传任务 ID。传入后走分片上传合并流程，此时 `url` 可为空 |
 
 - **返回参数**
 
@@ -88,3 +110,18 @@
 | file_uuid | string | 文件 ID |
 | file_info | string | 文件信息，用于发消息接口的 media 字段使用 |
 | ttl | int | 有效期（秒），到期后 file_info 失效，当等于 0 时表示可长期使用 |
+| id | string | 消息 ID，仅 `srv_send_msg=true` 时返回 |
+| raw_url | string | 文件下载链接，仅分片合并且媒体类型为图片、视频或语音时返回 |
+
+- **错误码**
+
+| **错误码** | **说明** | **排查建议** |
+| --- | --- | --- |
+| 850018 | 群被禁言或者机器人被禁言 | 请检查机器人是否被禁言 |
+| 850019 | 不支持的文件格式 | 请检查 `file_type` 是否正确 |
+| 850026 | 下载原始文件失败 | 请检查 URL 是否可访问或重试 |
+| 850031 | 上传文件超过大小限制 | 请减小文件大小 |
+| 850027 | 发送数据超时 | 请稍后重试 |
+| 10000 | 不支持的操作 | 请检查请求参数 |
+| 40093001 | 文件上传失败，请重试 | 请重新上传文件或分片 |
+| 40093002 | 超过当天发送文件容量上限 | 请次日重试或减少文件大小 |

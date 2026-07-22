@@ -238,6 +238,8 @@ module.exports = {
                 "sidebarDepth": 1,
                 "path": "/develop/api-v2/server-inter/group/manage/",
                 "children": [
+                  "server-inter/group/manage/get-group-info.md",
+                  "server-inter/group/manage/get-bot-state.md",
                   "server-inter/group/manage/event.md",
                   "server-inter/group/manage/get-member.md",
                 ]
@@ -258,6 +260,7 @@ module.exports = {
                 "children": [
                   "server-inter/user/share_url.md",
                   "server-inter/user/manage/event.md",
+                  "server-inter/user/manage/subscribe-message-status.md",
                 ]
               }
             ]

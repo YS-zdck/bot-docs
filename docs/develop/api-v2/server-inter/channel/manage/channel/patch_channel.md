@@ -49,8 +49,6 @@ application/json
 {
   "name": "新的私密子频道",
   "position": 1,
-  "owner_id": "0",
-  "sub_type": 0,
   "private_type": 1
 }
 ```

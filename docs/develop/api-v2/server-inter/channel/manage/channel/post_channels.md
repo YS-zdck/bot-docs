@@ -53,7 +53,6 @@ application/json
   "type": 0,
   "position": 1,
   "parent_id": "123456",
-  "owner_id": "0",
   "sub_type": 0,
   "private_type": 1
 }

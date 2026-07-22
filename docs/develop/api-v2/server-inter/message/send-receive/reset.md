@@ -46,7 +46,7 @@ DELETE /v2/groups/{group_openid}/messages/{message_id}
 
 可用于撤回机器人在当前群 `group_openid` 发送的消息，`message_id` 可通过消息发送成功时获得。消息发送超出 **2 分钟** 不可撤回。
 
-当机器人被群主设置为群管理员时，还可撤回成员发送的消息。成员消息的 `message_id` 可通过 `GROUP_MESSAGE_CREATE`、`GROUP_MESSAGE_AT_CREATE` 事件获取。
+当机器人被群主设置为群管理员时，还可撤回成员发送的消息。成员消息的 `message_id` 可通过 `GROUP_MESSAGE_CREATE`、`GROUP_AT_MESSAGE_CREATE` 事件获取。
 
 ### Content-Type
 
