@@ -61,8 +61,9 @@ module.exports = {
             "title": "消息相关",
             "collapsable": false,
             "sidebarDepth": 1,
-            "path": "/develop/api-v2/server-inter/message/",
+            "path": "/develop/api-v2/server-inter/message/overview.html",
             "children": [
+              "server-inter/message/rich-media.md",
               {
                 "title": "消息收发",
                 "collapsable": true,
@@ -81,7 +82,7 @@ module.exports = {
                 "title": "消息类型",
                 "collapsable": true,
                 "sidebarDepth": 1,
-                "path": "/develop/api-v2/server-inter/message/type/",
+                "path": "/develop/api-v2/server-inter/message/type/overview.html",
                 "children": [
                   "server-inter/message/type/text.md",
                   "server-inter/message/type/rich-text.md",
@@ -99,7 +100,7 @@ module.exports = {
                 "title": "消息交互",
                 "collapsable": true,
                 "sidebarDepth": 1,
-                "path": "/develop/api-v2/server-inter/message/trans/",
+                "path": "/develop/api-v2/server-inter/message/trans/overview.html",
                 "children": [
                   "server-inter/message/trans/emoji.md",
                   "server-inter/message/trans/text-chain.md",
@@ -107,6 +108,46 @@ module.exports = {
                 ]
               }
             ],
+          },
+          {
+            "title": "群聊模块",
+            "collapsable": false,
+            "sidebarDepth": 1,
+            "path": "/develop/api-v2/server-inter/group/",
+            "children": [
+              {
+                "title": "群管理",
+                "collapsable": true,
+                "sidebarDepth": 1,
+                "path": "/develop/api-v2/server-inter/group/manage/",
+                "children": [
+                  "server-inter/group/manage/get-group-info.md",
+                  "server-inter/group/manage/get-bot-state.md",
+                  "server-inter/group/manage/event.md",
+                  "server-inter/group/manage/get-member.md",
+                ]
+              }
+            ]
+          }, 
+          {
+            "title": "用户模块",
+            "collapsable": false,
+            "sidebarDepth": 1,
+            "path": "/develop/api-v2/server-inter/user/",
+            "children": [
+              {
+                "title": "用户管理",
+                "collapsable": true,
+                "sidebarDepth": 1,
+                "path": "/develop/api-v2/server-inter/user/manage/",
+                "children": [
+                  "server-inter/user/share_url.md",
+                  "server-inter/user/manage/event.md",
+                  "server-inter/user/manage/subscribe-message-status.md",
+                ]
+              }
+            ]
+
           },
           {
             "title": "频道模块",
@@ -225,46 +266,6 @@ module.exports = {
                 ]
               },
             ]
-          },
-          {
-            "title": "群聊模块",
-            "collapsable": false,
-            "sidebarDepth": 1,
-            "path": "/develop/api-v2/server-inter/group/",
-            "children": [
-              {
-                "title": "群管理",
-                "collapsable": true,
-                "sidebarDepth": 1,
-                "path": "/develop/api-v2/server-inter/group/manage/",
-                "children": [
-                  "server-inter/group/manage/get-group-info.md",
-                  "server-inter/group/manage/get-bot-state.md",
-                  "server-inter/group/manage/event.md",
-                  "server-inter/group/manage/get-member.md",
-                ]
-              }
-            ]
-          }, 
-          {
-            "title": "用户模块",
-            "collapsable": false,
-            "sidebarDepth": 1,
-            "path": "/develop/api-v2/server-inter/user/",
-            "children": [
-              {
-                "title": "用户管理",
-                "collapsable": true,
-                "sidebarDepth": 1,
-                "path": "/develop/api-v2/server-inter/user/manage/",
-                "children": [
-                  "server-inter/user/share_url.md",
-                  "server-inter/user/manage/event.md",
-                  "server-inter/user/manage/subscribe-message-status.md",
-                ]
-              }
-            ]
-
           }
         ]
       },

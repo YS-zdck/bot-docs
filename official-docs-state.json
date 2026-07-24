@@ -1,0 +1,1043 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-24T13:29:47.295Z",
+  "sitemapUrl": "https://bot.q.qq.com/wiki/sitemap.xml",
+  "pages": {
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/channels_channel_id.delete.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/channels_channel_id.delete.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "671c6cac94f1f1a642ff592f81bff6f58fa1eb561ffd4af0adcab12208a812e3",
+      "localPath": "docs/develop/api-v2/autogen/api/channels_channel_id.delete.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/channels_channel_id.get.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/channels_channel_id.get.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "bafa1cd326d08428f77f30fa351153907edd6064ed5938d8b9d27541a53d0ad3",
+      "localPath": "docs/develop/api-v2/autogen/api/channels_channel_id.get.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/channels_channel_id.patch.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/channels_channel_id.patch.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "aa3a1e0775998e2394084f6f9ac80fc35f151eddebb071d6d2c50222ee346b07",
+      "localPath": "docs/develop/api-v2/autogen/api/channels_channel_id.patch.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/gateway.get.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/gateway.get.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "3635fe0424d437c1a9ddac1d082203774b677cdba7db10127779b25a6e531c63",
+      "localPath": "docs/develop/api-v2/autogen/api/gateway.get.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/guilds_guild_id_channels.get.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/guilds_guild_id_channels.get.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "eb36343c8d6c8e97b0ba3e27ede6bc1eb83a28e02bb36736fa3510ee5414bbf3",
+      "localPath": "docs/develop/api-v2/autogen/api/guilds_guild_id_channels.get.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/guilds_guild_id_channels.post.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/guilds_guild_id_channels.post.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "1927f93edb7469d198b3cf5dd53a264d96059a75a40a316edb2c5527e2573ad1",
+      "localPath": "docs/develop/api-v2/autogen/api/guilds_guild_id_channels.post.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/guilds_guild_id.get.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/guilds_guild_id.get.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "df4de0748f16ebb7d0aced057b0e1fc3be5ad957d6c71e92f4ac7adc87a4cda3",
+      "localPath": "docs/develop/api-v2/autogen/api/guilds_guild_id.get.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/interactions_interaction_id.put.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/interactions_interaction_id.put.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "4db95604a4b864a30222054ff80e6ebe82ce907c8344f5b1c2dff1f8b95650d8",
+      "localPath": "docs/develop/api-v2/autogen/api/interactions_interaction_id.put.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/users_me_guilds.get.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/users_me_guilds.get.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "2a877bfbc9130e7edc77a5559b0710ffdfa854b80015b6659a73df3ccd398b37",
+      "localPath": "docs/develop/api-v2/autogen/api/users_me_guilds.get.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/users_me.get.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/users_me.get.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "45fb2a9aea83bc6f577773cd1539c553dfeda1457de90b553383e0b6663b376f",
+      "localPath": "docs/develop/api-v2/autogen/api/users_me.get.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_generate_url_link.post.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_generate_url_link.post.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "441f98c162ca69984483f0f086183906f1cacfc157c572b37d3442f28c0cd9ad",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_generate_url_link.post.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_id_upload_part_finish.post.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_id_upload_part_finish.post.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "f0fd4a676c603de99204012d44f77932f1ec19c6408cc7dc1289fdc266c3e25c",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_groups_group_id_upload_part_finish.post.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_id_upload_prepare.post.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_id_upload_prepare.post.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "fe8fa4fd32dca2b3584dbbd424abe4d6073cc118a49085977acfcfce4479be8a",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_groups_group_id_upload_prepare.post.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_openid_bot_state.get.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_openid_bot_state.get.html",
+      "lastmod": "2026-07-23T04:36:35.000Z",
+      "hash": "3d4b36550c343822ab0bfe076e30b091c61046ab328d90371434e3ee87811555",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_groups_group_openid_bot_state.get.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_openid_files.post.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_openid_files.post.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "8069d93c6358730a8d2bc2ca2c2e70a35b7245ca18aeae86c2c537049fd585d8",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_groups_group_openid_files.post.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_openid_info.get.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_openid_info.get.html",
+      "lastmod": "2026-07-23T04:36:35.000Z",
+      "hash": "a9df32e664aaf94ee3153c2aec7eff63d329d79d3f23578cb3b06f5a52d60144",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_groups_group_openid_info.get.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_openid_messages_message_id.delete.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_openid_messages_message_id.delete.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "7b06c53885d248133fe96b4da1edfb3163c5e438e82b080c3cdd7f964819d783",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_groups_group_openid_messages_message_id.delete.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_openid_messages.post.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_groups_group_openid_messages.post.html",
+      "lastmod": "2026-07-24T09:17:19.000Z",
+      "hash": "a3baba00970c208c4f5d1fc6bd577a27bb7e79d7d687a1673ba668f922f93bb8",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_groups_group_openid_messages.post.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_id_upload_part_finish.post.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_id_upload_part_finish.post.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "1dc6b2fa4ca26fc7571c4708c05a62a5d540f9c80b590c69fb354e82a8732726",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_users_user_id_upload_part_finish.post.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_id_upload_prepare.post.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_id_upload_prepare.post.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "b3be245e040dde98405570640ff4dbd2b77c8f328d09bea9629976a487bb848c",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_users_user_id_upload_prepare.post.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_openid_files.post.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_openid_files.post.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "b516b163ac98d7b5fff8cdc3a4071e089685d359bd5b33d8717b0827dde9d9af",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_users_user_openid_files.post.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_openid_messages_message_id.delete.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_openid_messages_message_id.delete.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "1bc9778f05254a91ca1fc1aaa44a5cb811646219dfe6561dee950656e8798665",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_users_user_openid_messages_message_id.delete.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_openid_messages.post.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_openid_messages.post.html",
+      "lastmod": "2026-07-24T09:36:51.000Z",
+      "hash": "740cd35be70760b28a33d9be67414adcd74a76912088f28e453b3583d2567437",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_users_user_openid_messages.post.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_openid_stream_messages.post.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/api/v2_users_user_openid_stream_messages.post.html",
+      "lastmod": "2026-07-22T10:23:09.000Z",
+      "hash": "c016e8dffeb529be867d7b7381786047d39d5d9a60a1a07850c724c770dc4fe3",
+      "localPath": "docs/develop/api-v2/autogen/api/v2_users_user_openid_stream_messages.post.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/c2c_message_create.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/c2c_message_create.html",
+      "lastmod": "2026-07-23T08:23:02.000Z",
+      "hash": "06d1f0d70c32220a665f88e311efa1a9aed8853aaece46fb858d1d409e51424d",
+      "localPath": "docs/develop/api-v2/autogen/event/c2c_message_create.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/c2c_msg_receive.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/c2c_msg_receive.html",
+      "lastmod": "2026-07-21T08:27:59.000Z",
+      "hash": "a89b8af9e146c01b0e26dc4c54ff0ef700efae78030f635ed29242be4157015f",
+      "localPath": "docs/develop/api-v2/autogen/event/c2c_msg_receive.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/c2c_msg_reject.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/c2c_msg_reject.html",
+      "lastmod": "2026-07-21T08:27:59.000Z",
+      "hash": "481405416c59190a40a8477fe6e56dccf674741e61fdadff02a33693a668201e",
+      "localPath": "docs/develop/api-v2/autogen/event/c2c_msg_reject.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/channel_create.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/channel_create.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "381df7a662436b81215bd4618154492f4e7224460270cd4ca4ba71ed38faedf9",
+      "localPath": "docs/develop/api-v2/autogen/event/channel_create.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/channel_delete.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/channel_delete.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "24eab925bb2d76038e5e5c9efdd188af2096e18c9d981e072d3c0bd81ca4889e",
+      "localPath": "docs/develop/api-v2/autogen/event/channel_delete.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/channel_update.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/channel_update.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "b49717987944fcf8a0a5d3238b48c64a88852a35a188ee18f869a5aee37f3eb0",
+      "localPath": "docs/develop/api-v2/autogen/event/channel_update.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/friend_add.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/friend_add.html",
+      "lastmod": "2026-07-21T08:27:59.000Z",
+      "hash": "707fc91d9a66990f5a7274d1b1a1fcc2adc375f38e9b0937ebdc0e39a7ec8c55",
+      "localPath": "docs/develop/api-v2/autogen/event/friend_add.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/friend_del.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/friend_del.html",
+      "lastmod": "2026-07-21T08:27:59.000Z",
+      "hash": "2a80f96efcfb19dcf92e795645026bdc0f0d97aa30faa5f917b87552cef3f546",
+      "localPath": "docs/develop/api-v2/autogen/event/friend_del.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_add_robot.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_add_robot.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "d4afc0bb6c2ec7efff6e4557c517af45d834220ba9d4247977158622be255d3f",
+      "localPath": "docs/develop/api-v2/autogen/event/group_add_robot.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_at_message_create.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_at_message_create.html",
+      "lastmod": "2026-07-23T08:23:02.000Z",
+      "hash": "ff5f16119bdd267c82ff0ec9f2dacc60d0b4922d80cc68fa1128c959e36e5dbd",
+      "localPath": "docs/develop/api-v2/autogen/event/group_at_message_create.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_del_robot.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_del_robot.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "1a73f75db9faa0f115aa9d62b4405d057a33570fde99f027a5d2f757ede38d77",
+      "localPath": "docs/develop/api-v2/autogen/event/group_del_robot.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_member_add.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_member_add.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "debfa95dfc660ffa0c9f15211b83b9aef41718d9ec912e7c578762eea08ad838",
+      "localPath": "docs/develop/api-v2/autogen/event/group_member_add.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_member_remove.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_member_remove.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "8cdf8197e51b1f63899224ad51866b409b0a97c80f1dd1a6db1e2dc334847c61",
+      "localPath": "docs/develop/api-v2/autogen/event/group_member_remove.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_message_create.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_message_create.html",
+      "lastmod": "2026-07-23T08:23:02.000Z",
+      "hash": "5028b87729cfc836eb86b937a3ae765f0a4919dd538c31b856ce91cdffc1387f",
+      "localPath": "docs/develop/api-v2/autogen/event/group_message_create.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_msg_receive.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_msg_receive.html",
+      "lastmod": "2026-07-21T08:27:59.000Z",
+      "hash": "347c7848995fc92dc0debac5e945d6042292c25b00cac3b660ef8b081c8c0e4b",
+      "localPath": "docs/develop/api-v2/autogen/event/group_msg_receive.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_msg_reject.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_msg_reject.html",
+      "lastmod": "2026-07-21T08:27:59.000Z",
+      "hash": "164debb479728cdaeb0bcc2f52547bb29fedb3b15a634530103994f71b2c216b",
+      "localPath": "docs/develop/api-v2/autogen/event/group_msg_reject.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/guild_create.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/guild_create.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "1d8ac10a232bb051bf214205a5fbf83bc244ef666446962fabe1bdb8bfece7a8",
+      "localPath": "docs/develop/api-v2/autogen/event/guild_create.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/guild_delete.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/guild_delete.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "a208eca70c307d63424c8b916b8fa004a50fe579f275984e893ee1ffd7dc443a",
+      "localPath": "docs/develop/api-v2/autogen/event/guild_delete.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/guild_update.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/guild_update.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "a73c2bc104a8c7f96c643180d0bd363fe4f4754084b7820a392c4d1c19e73831",
+      "localPath": "docs/develop/api-v2/autogen/event/guild_update.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/interaction_create.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/interaction_create.html",
+      "lastmod": "2026-07-23T08:23:02.000Z",
+      "hash": "9d68f17e390f35c35c94c44b660c65b13498e1655ec5951a5740a97d8b463a8f",
+      "localPath": "docs/develop/api-v2/autogen/event/interaction_create.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/subscribe_message_status.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/subscribe_message_status.html",
+      "lastmod": "2026-07-21T08:27:59.000Z",
+      "hash": "b744cae80a6b34588b01a1c9da7e1e322633c3196111fb7f3fb84944449129d3",
+      "localPath": "docs/develop/api-v2/autogen/event/subscribe_message_status.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/access-token.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/access-token.html",
+      "lastmod": "2026-07-23T02:13:47.000Z",
+      "hash": "540d0aab104dae90d3dd3ed7c51a0dcac9a188e14b72cf9edc9371e5e3b303aa",
+      "localPath": "docs/develop/api-v2/dev-prepare/access-token.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/api-call-guide.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/api-call-guide.html",
+      "lastmod": "2026-07-21T13:50:42.000Z",
+      "hash": "77ec30dd96c2cbee776e03c3e2c4480af77e83b143eb406789dd5cf5c0d562b3",
+      "localPath": "docs/develop/api-v2/dev-prepare/api-call-guide.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/error-trace/websocket.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/error-trace/websocket.html",
+      "lastmod": "2026-07-21T13:50:42.000Z",
+      "hash": "164a339d55c1e2613cddcd680708dae028c5d89c664b43fd1059fa0c4f038850",
+      "localPath": "docs/develop/api-v2/dev-prepare/error-trace/websocket.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/event-emit/payload.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/event-emit/payload.html",
+      "lastmod": "2026-07-21T13:50:42.000Z",
+      "hash": "f148ab3b3ef198575af3a7b4bc8ffd66a64bde7811043f45eb0a3ee08f11ae29",
+      "localPath": "docs/develop/api-v2/dev-prepare/event-emit/payload.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/event-emit/webhook.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/event-emit/webhook.html",
+      "lastmod": "2026-07-21T13:50:42.000Z",
+      "hash": "53699057c58044112f4a16a3dfe717ea40b1157e960bc253ec9e87fea3c6f794",
+      "localPath": "docs/develop/api-v2/dev-prepare/event-emit/webhook.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/event-emit/websocket.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/event-emit/websocket.html",
+      "lastmod": "2026-07-21T13:50:42.000Z",
+      "hash": "1416babf5ffc35596dfc93a49f43674506451fdefda41302b1ae35e414158e9c",
+      "localPath": "docs/develop/api-v2/dev-prepare/event-emit/websocket.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/getting-started.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/getting-started.html",
+      "lastmod": "2026-07-21T14:16:06.000Z",
+      "hash": "58bffa74f74f9d51b7b5258084d798dba0480207e39e19380d5d1203b74ef0d8",
+      "localPath": "docs/develop/api-v2/dev-prepare/getting-started.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/interface-framework/api-use.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/interface-framework/api-use.html",
+      "lastmod": "2026-07-21T13:50:42.000Z",
+      "hash": "eb2c8cc852af8278d5749f97f9d6f82cb74b29308e52dd7dcd67f81ec9de1220",
+      "localPath": "docs/develop/api-v2/dev-prepare/interface-framework/api-use.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/interface-framework/event-emit.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/interface-framework/event-emit.html",
+      "lastmod": "2026-05-20T12:38:10.000Z",
+      "hash": "382784411d0f334897512e017ce09c9e9566182706fbfa04be60f344d1676244",
+      "localPath": "docs/develop/api-v2/dev-prepare/interface-framework/event-emit.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/interface-framework/opcode.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/interface-framework/opcode.html",
+      "lastmod": "2024-09-12T13:12:52.000Z",
+      "hash": "02d4a0b76a8684c59131ddb2be3fc78bf487878b0f0ca13ca1120758fac51059",
+      "localPath": "docs/develop/api-v2/dev-prepare/interface-framework/opcode.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/interface-framework/reference.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/interface-framework/reference.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "dba591a2ed9813407f76cad653d8a9df27da82c16a8f1c3bf6c852b4b1bf65cc",
+      "localPath": "docs/develop/api-v2/dev-prepare/interface-framework/reference.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/interface-framework/sign.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/dev-prepare/interface-framework/sign.html",
+      "lastmod": "2024-09-12T13:12:52.000Z",
+      "hash": "c1e153bc582295fd88fd2ec1b5ad0d7b155dda7f8d99111302f2847b9651aa34",
+      "localPath": "docs/develop/api-v2/dev-prepare/interface-framework/sign.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/gateway/error/data/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/gateway/error/data/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "789c1d81660441668b0db66f08e2dee983d9dcda7d5afbf1151b5f3d4c69659c",
+      "localPath": "docs/develop/api-v2/gateway/error/data/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/gateway/error/error.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/gateway/error/error.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "f9190d0cf38d749d65fa77f07c8f98e3337897fca0950dc8e2d06a5f21fd80e3",
+      "localPath": "docs/develop/api-v2/gateway/error/error.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "dd65f614217476e0ac56c8440b3d55540cdcbd00a59b401060329bb3ed2c2e67",
+      "localPath": "docs/develop/api-v2/openapi/emoji/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/error/data/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/error/data/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "789c1d81660441668b0db66f08e2dee983d9dcda7d5afbf1151b5f3d4c69659c",
+      "localPath": "docs/develop/api-v2/openapi/error/data/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/error/error.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/error/error.html",
+      "lastmod": "2026-07-21T13:50:42.000Z",
+      "hash": "e1b5260f9533a057ab6d3dbf3000863c347534099f024455dbd1f383baf5f774",
+      "localPath": "docs/develop/api-v2/openapi/error/error.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/member/delete_member.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/member/delete_member.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "8afa300cedfaccd14600894f90cf699db9925fcc17ffcfa9e7b58dc8d598840f",
+      "localPath": "docs/develop/api-v2/openapi/member/delete_member.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/member/get_member.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/member/get_member.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "bc1f4838239c683fd3a14f8cd31ec98db93a8080f7221143672d01e14b7f1d95",
+      "localPath": "docs/develop/api-v2/openapi/member/get_member.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/member/get_members.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/member/get_members.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "56159180af063c7179dae96212f9bce56fca6f43e9b1d8865c6cc490cd752110",
+      "localPath": "docs/develop/api-v2/openapi/member/get_members.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/member/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/member/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "75859a22157fc86f4d9deadc91e453a9659b9eb121967ef47c5a9834e2627edd",
+      "localPath": "docs/develop/api-v2/openapi/member/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/reaction/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/reaction/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "8c29beef7f56dc260fb8edecae311e3a82cfdd13c1c49cd4102b81904c987db9",
+      "localPath": "docs/develop/api-v2/openapi/reaction/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/user/guilds.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/user/guilds.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "b5d798d5679b8fb430b638fb1776bcc047de712c52aeda1f9ce7d756f3c55037",
+      "localPath": "docs/develop/api-v2/openapi/user/guilds.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/user/me.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/user/me.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "26412f99dac9e851fac7b84d391630cc6205e4c2e89f913e73af6e16f3553b1e",
+      "localPath": "docs/develop/api-v2/openapi/user/me.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/user/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/user/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "dc1496114c676c998dbaf0e5fff9c30c14bdf85f238cc01f9f79d58522132ffd",
+      "localPath": "docs/develop/api-v2/openapi/user/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/wss/shard_url_get.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/wss/shard_url_get.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "5b1b09dc04e8f96abea1dc4303aead42b5f083f83b8100794dc398d8b901bc73",
+      "localPath": "docs/develop/api-v2/openapi/wss/shard_url_get.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/openapi/wss/url_get.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/openapi/wss/url_get.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "216e162a9349addfe988906c69a82bcadb46781599ccdaa0eaa8094b5e235281",
+      "localPath": "docs/develop/api-v2/openapi/wss/url_get.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/api_permissions/get_guild_api_permission.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/api_permissions/get_guild_api_permission.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "c3ef8f7a8d7217b14ecfda946861f755ad642c2e6351dcc6ff1f9e1c7c338433",
+      "localPath": "docs/develop/api-v2/server-inter/channel/api_permissions/get_guild_api_permission.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/api_permissions/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/api_permissions/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "a57d94d8f3d6c1cd4183a5d14f7c5d46d37fc47b34af5e4d1685e7f14a7220a6",
+      "localPath": "docs/develop/api-v2/server-inter/channel/api_permissions/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/api_permissions/post_api_permission_demand.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/api_permissions/post_api_permission_demand.html",
+      "lastmod": "2026-05-20T12:38:10.000Z",
+      "hash": "1f9180dc66b1a81c9bb44c1006796f094df9ababec57525bff2d8f7ac4fc7a7a",
+      "localPath": "docs/develop/api-v2/server-inter/channel/api_permissions/post_api_permission_demand.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/announces/delete_channel_announces.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/announces/delete_channel_announces.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "5be0f212a748f6fa77d3c2b9122287457034b600a07cbe89844d443cd2575333",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/announces/delete_channel_announces.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/announces/delete_guild_announces.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/announces/delete_guild_announces.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "d1d1e380067150e01ac0f245b51dd4f21d6b82500ebd28902eed3ad380536443",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/announces/delete_guild_announces.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/announces/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/announces/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "67647496a90e678323dea54737c1e52492bc1736d3d073a615de6acbe25f6512",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/announces/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/announces/post_channel_announces.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/announces/post_channel_announces.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "28db0705247235c90c73a51b41a22f8193451dd5968fd740be1da18fe961d61c",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/announces/post_channel_announces.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/announces/post_guild_announces.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/announces/post_guild_announces.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "6923ebce8097e1110d631ebebce9504aee1c8407e0b7e9ded3a34b3aea3dc1ab",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/announces/post_guild_announces.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/audio/audio_control.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/audio/audio_control.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "ef0664db8e185a5e235c560140059aa3701d93118912869df37ae0d64b4f0a97",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/audio/audio_control.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/audio/delete_mic.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/audio/delete_mic.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "61de8ad51bf315d4744b8191ab6b078d4c0f7f57f50504f5aa2c25e721d56432",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/audio/delete_mic.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/audio/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/audio/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "2c62c13e36bacea800ceeaae0e5c175fdde16c8bcef4fc4aff7535734bbab517",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/audio/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/audio/put_mic.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/audio/put_mic.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "9cf3ce1e1a87a738b89f6667306bc1888fd6577fefec44adc519fc6072e414e4",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/audio/put_mic.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/delete_thread.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/delete_thread.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "3db548a45a491c6e8c909da237ed58996108e51e85b1a6f8efba65e29a7a65a7",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/forum/delete_thread.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/forum.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/forum.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "a42c1fb4b970131a3fdfeb4958c68bc9ef694f81fd1e66e7d15ec4421a41f65e",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/forum/forum.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/get_thread.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/get_thread.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "0a73ba27d77ac4e7c36e253495c66698cf3f93c1ccb467b830281e5ec0728e86",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/forum/get_thread.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/get_threads_list.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/get_threads_list.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "29c3d0bd51ff5c7c39b3394b7d037329e5ba45bb023996ab6427940536d2b0b1",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/forum/get_threads_list.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "8ed4c2d614c1bfa78642f99e967f6473ce5a26f62fa43735468053e5dd2c8217",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/forum/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/open_forum.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/open_forum.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "28a31a87af03809edc88e38b14ecbf54c1e81deb30f12f09d8a247545b0adf87",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/forum/open_forum.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/put_thread.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/forum/put_thread.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "255e5f97b740dac0831514c68ac69da6da7b9376cb9abf6655a0a8f0e8e43b6e",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/forum/put_thread.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/pins/delete_pins_message.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/pins/delete_pins_message.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "f2794fb38cc10e7cea2a90cda6d749817a928f394ae1f4e8c64fa377a50c327b",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/pins/delete_pins_message.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/pins/get_pins_message.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/pins/get_pins_message.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "2280ecafabb6a9b5d0346cd89dcd6a157f4d007126f20b46b2614c29737d131c",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/pins/get_pins_message.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/pins/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/pins/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "e77cedb3c919c0e7491168b51bbbfa613815a523477d341a5cf5b95e7d13883c",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/pins/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/pins/put_pins_message.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/pins/put_pins_message.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "5a978c6ca7d722d6bca0090b2d623e9cb0b61052ce91e0cf7b158146cce78556",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/pins/put_pins_message.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/delete_schedule.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/delete_schedule.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "43ccd317291d8989105114fa5b302e252ef1908cc2a8cdb9471c989d9bf5740d",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/schedule/delete_schedule.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/get_schedule.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/get_schedule.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "c7b4b5d4b4795562dccbb6276a22a41b65e9cfb0da81c4015db30564ae4a5fbc",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/schedule/get_schedule.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/get_schedules.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/get_schedules.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "adb2d21c52908375f9fbf971531361b0d4f42980d88f3eb274f854cb501efd7c",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/schedule/get_schedules.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "f802aa89a4fb239a5ded88c2aa499c1278310e1b1edd74c13c6d61bf10792d7d",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/schedule/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/patch_schedule.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/patch_schedule.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "cbc6254e3260f7c10603dbe9496a84410078fcc42a8dd0697a7a1bc59a78e1ed",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/schedule/patch_schedule.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/post_schedule.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/content/schedule/post_schedule.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "987c7ea1f6ffe07c77d2c8e5bb43f37e5a00990724e12afb83d00dd6ae1929e8",
+      "localPath": "docs/develop/api-v2/server-inter/channel/content/schedule/post_schedule.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/manage/channel/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/manage/channel/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "67475e99b20f8eeaa69ed6818792fb3b7862aa573da727ce72cb749207e8ddce",
+      "localPath": "docs/develop/api-v2/server-inter/channel/manage/channel/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/manage/guild/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/manage/guild/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "0390ff6d200f21ece3d8a8ffc3144dd5577d9e4ead671986fe9e33b0b041760a",
+      "localPath": "docs/develop/api-v2/server-inter/channel/manage/guild/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/manage/user/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/manage/user/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "dc1496114c676c998dbaf0e5fff9c30c14bdf85f238cc01f9f79d58522132ffd",
+      "localPath": "docs/develop/api-v2/server-inter/channel/manage/user/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/message/dms.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/message/dms.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "54d9e1559d84e23eb979beeb4cc4e990f6bf616b467865e8314821846f7aea8c",
+      "localPath": "docs/develop/api-v2/server-inter/channel/message/dms.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/message/event.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/message/event.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "0c7094282ba11904465d41b04cf277590461216e425c75d7607e3ee71f4a727f",
+      "localPath": "docs/develop/api-v2/server-inter/channel/message/event.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/message/format.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/message/format.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "3d8059d98a9a61383c85803da7c7fde46fba2f0aed1cb76e3f4fb4d5a9f80c0b",
+      "localPath": "docs/develop/api-v2/server-inter/channel/message/format.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/message/recall.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/message/recall.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "43adf6ee69afee7a341ce19c258571ad5d4e3020c40ef4ed2dd36d9ab82fea63",
+      "localPath": "docs/develop/api-v2/server-inter/channel/message/recall.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/message/send.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/message/send.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "441c00281214fe45156dbfd46566441c946d3d2e6430713b223d10f1e05accc1",
+      "localPath": "docs/develop/api-v2/server-inter/channel/message/send.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/miniapp/interface.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/miniapp/interface.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "35e55ab60c6bc2d77a4360ff3f0af8988eeb552f6dd6fc0553ff7aa9dd9f01fe",
+      "localPath": "docs/develop/api-v2/server-inter/channel/miniapp/interface.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/miniapp/opendata.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/miniapp/opendata.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "30ff4dc7cec45fffc3edcd081a379c4657b4a5d926c710ff08366a12b04ca7a0",
+      "localPath": "docs/develop/api-v2/server-inter/channel/miniapp/opendata.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/channel_permissions/get_channel_permissions.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/channel_permissions/get_channel_permissions.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "8cbf163369508bd5bc9d765c0f2888a0e073ae5048a97447d8b5580dd98a07e7",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role-group/channel_permissions/get_channel_permissions.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/channel_permissions/get_channel_roles_permissions.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/channel_permissions/get_channel_roles_permissions.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "ecbae6492ea616c5a18ae9367a4e13d3f938e61a1ce743ec4b7f5226655c9929",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role-group/channel_permissions/get_channel_roles_permissions.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/channel_permissions/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/channel_permissions/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "2ce8f022ff1dfaba5a4d0189fb7fcc0ba5813a5769c9b0b28dec4c8f7cd4e636",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role-group/channel_permissions/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/channel_permissions/put_channel_permissions.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/channel_permissions/put_channel_permissions.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "8b4375b63c9fc389e2c5183acf720d48191ba87324a9e1dbe0e2dc202f49e910",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role-group/channel_permissions/put_channel_permissions.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/channel_permissions/put_channel_roles_permissions.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/channel_permissions/put_channel_roles_permissions.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "06688e8c0af34b8f0a5fbae9213f5a5f5b16a90f9603812f5f3eaec05b994f7b",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role-group/channel_permissions/put_channel_roles_permissions.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/delete_guild_member_role.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/delete_guild_member_role.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "0dd643900f3e572fade8ef79a4daf6adae97d46e1bc659b080cd9efec27f2d8f",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role-group/delete_guild_member_role.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/delete_guild_role.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/delete_guild_role.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "9ba2e0656ebfc7b91d5c51730aff20f12be298f0d3fd2a07ba41048e35fa349e",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role-group/delete_guild_role.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/get_guild_roles.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/get_guild_roles.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "d4426f7f383894c1c84fac356fcc279e142659e9c8c755b1c643b947853d777a",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role-group/get_guild_roles.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/patch_guild_role.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/patch_guild_role.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "cfb77353859c8ccf2d58abedb56cf3162889f9bcd166473f8b6fd5f387e90266",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role-group/patch_guild_role.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/post_guild_role.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/post_guild_role.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "eea0c865d4350d360ca1b6d1ca5997ec23b59f17e9431a8dd4593bba0587e3e6",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role-group/post_guild_role.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/put_guild_member_role.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role-group/put_guild_member_role.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "ce9efd4d91696f732a21abba5cb2fd3005b6e423c05e88b2c138f98b57f74bc6",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role-group/put_guild_member_role.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/audio_or_live_channel_member.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/audio_or_live_channel_member.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "d7a1244cd9f051e65a0c7c6c7ca666d037ddea5d67581a5c60e465db5e3fb44b",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role/audio_or_live_channel_member.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/get_online_nums.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/get_online_nums.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "e7e103ea0a06656f1c636e9ab1845e1c94a1d1bac66de7fd650c0913de9dc7af",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role/get_online_nums.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/guild_member.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/guild_member.html",
+      "lastmod": "2024-07-22T02:40:23.000Z",
+      "hash": "2f8f29e00119363ae8e73c82b9cddc05f4fa3529791e570b12ac8ad7bec9e1bf",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role/guild_member.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/delete_member.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/delete_member.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "66673ece463a54a7b38b17205e0df5e02f963be55dbc9086ba5c7ea1cdce7ad5",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role/member/delete_member.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/get_member.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/get_member.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "154443bf4e7f03af1e5cc5ad848fa3ff595d534d69c26fc4b7e5f1eb9d306a88",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role/member/get_member.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/get_members.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/get_members.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "de437fdad292a53b9fde4c5d8f53ab86a004e3ed38a4fd4da846155d18a790ce",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role/member/get_members.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/get_role_members.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/get_role_members.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "70340c7641fca5d17e7de3746e1c7bd950b02cf75df568a83f39660bbc630ad0",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role/member/get_role_members.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "75859a22157fc86f4d9deadc91e453a9659b9eb121967ef47c5a9834e2627edd",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role/member/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/role_model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/role/member/role_model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "9fe5f9cfc416e859e3606fafd9e9c72cde1a731f3cc4d1c3a4e5ca87d17529a5",
+      "localPath": "docs/develop/api-v2/server-inter/channel/role/member/role_model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/speak/patch_guild_member_mute.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/speak/patch_guild_member_mute.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "18b58e052b02a95db0dc05043c2bf23e054c80f17ed08bb6d50a47bab5dbec80",
+      "localPath": "docs/develop/api-v2/server-inter/channel/speak/patch_guild_member_mute.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/speak/patch_guild_mute_multi_member.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/speak/patch_guild_mute_multi_member.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "5c495ae46f2cb79c8134f18d05858f91882105818d3efe3d20e7ec7b10d681c2",
+      "localPath": "docs/develop/api-v2/server-inter/channel/speak/patch_guild_mute_multi_member.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/speak/patch_guild_mute.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/speak/patch_guild_mute.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "1b5762510aec4351d5c612bf58bf40db1750c3b3cdba46d39b5811082999e2ae",
+      "localPath": "docs/develop/api-v2/server-inter/channel/speak/patch_guild_mute.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/speak/setting/message_setting.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/speak/setting/message_setting.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "2b47c16b144f9703cd2bd266a8ed5f5dd9ccf2825aeb40f944f247d85f4b4acc",
+      "localPath": "docs/develop/api-v2/server-inter/channel/speak/setting/message_setting.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/speak/setting/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/channel/speak/setting/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "262076bed13192dff33210966c606eb6d9e9e15be6732765fd7dbcc69b394f29",
+      "localPath": "docs/develop/api-v2/server-inter/channel/speak/setting/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/overview.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/overview.html",
+      "lastmod": "2026-07-21T15:01:44.000Z",
+      "hash": "74e0d058bf988a9fcf4ba82dd25f52b187ab1ba6ade6f881209c5cc4e7a8c03c",
+      "localPath": "docs/develop/api-v2/server-inter/message/overview.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/rich-media.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/rich-media.html",
+      "lastmod": "2026-07-21T13:50:42.000Z",
+      "hash": "46130dd4bfcd0d638ed69243cde7e83c7af127157864ac2a2bf84c1915bfe843",
+      "localPath": "docs/develop/api-v2/server-inter/message/rich-media.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/template/model.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/template/model.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "43759e1aa2cebababf604bfafae3e9947d1f20c3df7a199f542d001d55cfa95c",
+      "localPath": "docs/develop/api-v2/server-inter/message/template/model.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/trans/emoji.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/trans/emoji.html",
+      "lastmod": "2023-11-22T08:19:57.000Z",
+      "hash": "c2743ddabff0da9b716f2ba030eff26fe5e2b4fbb646531ef2a84640d32494ac",
+      "localPath": "docs/develop/api-v2/server-inter/message/trans/emoji.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/trans/msg-btn.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/trans/msg-btn.html",
+      "lastmod": "2026-07-20T19:25:45.000Z",
+      "hash": "28f378a99a43b0dabf906b9264cceb35a4b8022c186082843f0195eade6e2895",
+      "localPath": "docs/develop/api-v2/server-inter/message/trans/msg-btn.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/trans/overview.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/trans/overview.html",
+      "lastmod": "2026-07-21T13:50:42.000Z",
+      "hash": "5b1f494a130734d1922a7d2fa244645e2916574653cf23f8dd3e868d134620a0",
+      "localPath": "docs/develop/api-v2/server-inter/message/trans/overview.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/trans/text-chain.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/trans/text-chain.html",
+      "lastmod": "2024-06-07T07:21:22.000Z",
+      "hash": "58aae0e81555545fb2c88374938ee27077aa959f9d6bd5c80150d22607e5394a",
+      "localPath": "docs/develop/api-v2/server-inter/message/trans/text-chain.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/type/ark.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/type/ark.html",
+      "lastmod": "2026-07-22T12:51:48.000Z",
+      "hash": "fe5b73f7ce303b946340233bd998ab643af5c249c5989391dc940680fd39b092",
+      "localPath": "docs/develop/api-v2/server-inter/message/type/ark.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/type/embed.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/type/embed.html",
+      "lastmod": "2026-05-20T12:38:10.000Z",
+      "hash": "dcb6ec8b5d11372aa24398a81c0b04a376447ffbd4a5d03e4728b7d203deeaf8",
+      "localPath": "docs/develop/api-v2/server-inter/message/type/embed.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/type/markdown.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/type/markdown.html",
+      "lastmod": "2026-07-22T12:51:48.000Z",
+      "hash": "95ad6e7c0d4515e858f6061c0adfe7fb837013c0b7abd92cea9931c7e29b1558",
+      "localPath": "docs/develop/api-v2/server-inter/message/type/markdown.md",
+      "localExists": true
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/type/overview.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/type/overview.html",
+      "lastmod": "2026-07-23T08:32:35.000Z",
+      "hash": "9b7acb009de60b0fe85b15787bcd47790aac973be67979cd49aaf45d9374fcd6",
+      "localPath": "docs/develop/api-v2/server-inter/message/type/overview.md",
+      "localExists": false
+    },
+    "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/user/manage/event.html": {
+      "url": "https://bot.q.qq.com/wiki/develop/api-v2/server-inter/user/manage/event.html",
+      "lastmod": "2026-01-15T08:08:29.000Z",
+      "hash": "67de6d945b254e62c877da594bc93bb83010731501af3c32cbeed129413aec22",
+      "localPath": "docs/develop/api-v2/server-inter/user/manage/event.md",
+      "localExists": true
+    }
+  }
+}

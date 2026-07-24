@@ -184,14 +184,14 @@
 | timestamp | string | 触发时间 RFC 3339 格式 |
 | guild_id | string | 频道的 openid ，仅在频道场景提供该字段 |
 | channel_id | string | 文字子频道的 openid，仅在频道场景提供该字段 |
-| user_openid | string | 单聊单聊按钮触发x，的用户 openid，仅在单聊场景提供该字段 |
+| user_openid | string | 触发单聊按钮的用户 OpenID，仅在单聊场景提供该字段 |
 | group_openid | string | 群的 openid，仅在群聊场景提供该字段 |
 | group_member_openid | string | 按钮触发用户，群聊的群成员 openid，仅在群聊场景提供该字段 |
-| data.resoloved.button_data | string | 操作按钮的 data 字段值（在发送消息按钮时设置） |
-| data.resoloved.button_id | string | 操作按钮的 id 字段值（在发送消息按钮时设置） |
-| data.resoloved.user_id | string | 操作的用户 userid，仅频道场景提供该字段 |
-| data.resoloved.feature_id | string | 操作按钮的 id 字段值，仅自定义菜单提供该字段（在管理端设置） |
-| data.resoloved.message_id | string | 操作的消息id，目前仅频道场景提供该字段 |
+| data.resolved.button_data | string | 操作按钮的 data 字段值（在发送消息按钮时设置） |
+| data.resolved.button_id | string | 操作按钮的 id 字段值（在发送消息按钮时设置） |
+| data.resolved.user_id | string | 操作的用户 userid，仅频道场景提供该字段 |
+| data.resolved.feature_id | string | 操作按钮的 id 字段值，仅自定义菜单提供该字段（在管理端设置） |
+| data.resolved.message_id | string | 操作的消息id，目前仅频道场景提供该字段 |
 | version | int | 默认 1 |
 
 - **事件示例**

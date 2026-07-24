@@ -4,6 +4,26 @@ sidebar: auto
 
 # 文档更新日志
 
+## 2026-07-24
+
+#### 新增概述文档
+
+* [消息收发概述](/develop/api-v2/server-inter/message/overview)：补充单聊、群聊、频道的收发入口，主动与被动消息、频率、时效、去重和撤回规则
+* [消息类型](/develop/api-v2/server-inter/message/type/overview)：补充发送 `msg_type`、接收 `message_type` 和各场景支持情况
+* [富媒体消息概述](/develop/api-v2/server-inter/message/rich-media)：补充类型限制、分片上传、URL 上传、`file_info` 发送及场景隔离说明
+* [消息交互概述](/develop/api-v2/server-inter/message/trans/overview)：补充消息按钮互动流程、`keyboard` 使用和互动响应时限
+
+#### 修改接口/事件文档
+
+* [消息发送](/develop/api-v2/server-inter/message/send-receive/send)：单聊路径参数统一为 `user_openid`，补充接口频率、内容字段互斥规则、Ark 权限及被动回复字段来源
+* [流式消息](/develop/api-v2/server-inter/message/send-receive/streaming)：路径参数统一为 `user_openid`，补充 `50 QPS`、`append/replace` 模式、召回标记、完整响应字段及错误码
+* [消息撤回](/develop/api-v2/server-inter/message/send-receive/reset)：补充单聊和群聊路径参数、`10 QPS` 频率限制及接口错误码
+* [消息按钮](/develop/api-v2/server-inter/message/trans/msg-btn)：修正 `data.resolved` 字段路径及单聊用户字段说明
+
+#### 文档结构调整
+
+* 消息、消息类型和消息交互导航入口改为对应概述页面，并增加富媒体消息概述入口
+
 ## 2026-07-22
 
 #### 新增接口/事件文档
@@ -14,13 +34,19 @@ sidebar: auto
 
 #### 修改接口文档
 
-* [消息发送](/develop/api-v2/server-inter/message/send-receive/send)：补充 `msg_type=6` 输入状态通知及 `input_notify` 参数说明
-* [富媒体上传](/develop/api-v2/server-inter/message/send-receive/rich-media)：补充 URL 上传与分片合并方式、`srv_send_msg`、`raw_url`、接口频率及错误码
-* [分片上传](/develop/api-v2/server-inter/message/send-receive/chunked-upload)：接口路径参数统一为 `{user_id}`、`{group_id}`，修正分片序号、字段类型并补充上传配置、频率及错误码
+* [获取群基础信息](/develop/api-v2/server-inter/group/manage/get-group-info)、[获取机器人群内状态](/develop/api-v2/server-inter/group/manage/get-bot-state)：补充仅对白名单机器人开放、`60 QPM` 频率限制、返回字段及错误码说明
+* [消息发送](/develop/api-v2/server-inter/message/send-receive/send)：补充 `msg_type=6` 输入状态通知，明确 `input_type=1` 表示“正在输入”，`input_second` 表示状态持续时间
+* [流式消息](/develop/api-v2/server-inter/message/send-receive/streaming)：明确输入状态通知只能展示“正在输入”状态，不能替代流式消息内容更新接口
+* [富媒体上传](/develop/api-v2/server-inter/message/send-receive/rich-media)：完善 URL 上传和分片合并参数，补充 `srv_send_msg`、`file_name`、`upload_id`、`id`、`raw_url`、`50 QPS` 频率限制及错误码
+* [分片上传](/develop/api-v2/server-inter/message/send-receive/chunked-upload)：路径参数统一为 `{user_id}`、`{group_id}`，分片序号修正为从 `0` 开始，补充 `upload_config`、`10 QPS` 频率限制及上传错误码
 * [消息撤回](/develop/api-v2/server-inter/message/send-receive/reset)：修正群消息事件名为 `GROUP_AT_MESSAGE_CREATE`
 * [创建子频道](/develop/api-v2/server-inter/channel/manage/channel/post_channels)、[修改子频道](/develop/api-v2/server-inter/channel/manage/channel/patch_channel)：修正请求示例中的非请求字段
-## 2026-07-10
 
+#### 文档结构调整
+
+* 将新增群管理接口和订阅消息授权状态变更事件加入 API 文档导航
+
+## 2026-07-10
 
 #### 新增接口文档
 
