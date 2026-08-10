@@ -17,7 +17,7 @@
 	</tr>
 	<tr>
     <td>HTTP URL</td>
-    <td>https://bots.qq.com/app/getAppAccessToken</td>
+    <td>https://api.bot.qq.com/app/getAppAccessToken</td>
 	</tr>
 	<tr>
     <td>HTTP Method</td>
@@ -52,7 +52,7 @@
 - **调用示例**
 
 ```shell
-curl --location 'https://bots.qq.com/app/getAppAccessToken' \
+curl --location 'https://api.bot.qq.com/app/getAppAccessToken' \
 --header 'Content-Type: application/json' \
 --data '{
   "appId": "APPID",
@@ -81,7 +81,7 @@ curl --location 'https://bots.qq.com/app/getAppAccessToken' \
 **统一地址**
 
 ```
-https://api.sgroup.qq.com
+https://api.bot.qq.com
 ```
 
 

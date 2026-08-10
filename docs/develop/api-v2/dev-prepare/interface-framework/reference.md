@@ -24,7 +24,7 @@ payload 指的是在 websocket 连接上传输的数据，网关的上下行消�
 第一步先调用 [/gateway](../../openapi/wss/url_get.md) 或 [/gateway/bot](../../openapi/wss/shard_url_get.md) 接口获取网关地址。 会得到一个类似下面这样的地址：
 
 ```
-wss://api.sgroup.qq.com/websocket/
+wss://api.bot.qq.com/websocket/
 ```
 
 然后进行 websocket 连接，一旦连接成功，就会返回 [OpCode 10 Hello](opcode.md) 消息。这个消息主要的内容是心跳周期，单位毫秒(milliseconds)，如下：

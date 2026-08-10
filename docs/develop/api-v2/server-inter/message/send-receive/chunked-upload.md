@@ -43,12 +43,12 @@
 
 | **属性** | **类型** | **必填** | **说明** |
 | --- | --- | --- | --- |
-| file_type | int | 否 | 业务类型：1 图片，2 视频，3 语音，4 文件 |
-| file_name | string | 否 | 文件名 |
-| file_size | string | 否 | 文件大小，单位为字节 |
-| md5 | string | 否 | 完整文件的 MD5 |
-| sha1 | string | 否 | 完整文件的 SHA1 |
-| md5_10m | string | 否 | 文件前 10002432 字节（约 10MB）的 MD5 |
+| file_type | int | 是 | 业务类型：1 图片，2 视频，3 语音，4 文件 |
+| file_name | string | 是 | 文件名 |
+| file_size | string | 是 | 文件大小，单位为字节 |
+| md5 | string | 是 | 完整文件的 MD5 |
+| sha1 | string | 是 | 完整文件的 SHA1 |
+| md5_10m | string | 是 | 文件前 10002432 字节（约 10MB）的 MD5 |
 
 - **返回参数**
 
@@ -107,12 +107,12 @@
 
 | **属性** | **类型** | **必填** | **说明** |
 | --- | --- | --- | --- |
-| file_type | int | 否 | 业务类型：1 图片，2 视频，3 语音，4 文件 |
-| file_name | string | 否 | 文件名 |
-| file_size | string | 否 | 文件大小，单位为字节 |
-| md5 | string | 否 | 完整文件的 MD5 |
-| sha1 | string | 否 | 完整文件的 SHA1 |
-| md5_10m | string | 否 | 文件前 10002432 字节（约 10MB）的 MD5 |
+| file_type | int | 是 | 业务类型：1 图片，2 视频，3 语音，4 文件。图片软限制 20 MB、视频软限制 30 MB、语音软限制 20 MB、文件软限制 200 MB；超过软限制降级为文件类型，超过 200 MB 返回错误 |
+| file_name | string | 是 | 文件名 |
+| file_size | string | 是 | 文件大小，单位为字节 |
+| md5 | string | 是 | 完整文件的 MD5 校验值 |
+| sha1 | string | 是 | 完整文件的 SHA1 校验值 |
+| md5_10m | string | 是 | 文件前 10002432 字节（约 10MB）的 MD5 校验值 |
 
 - **返回参数**
 

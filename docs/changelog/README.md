@@ -4,6 +4,22 @@ sidebar: auto
 
 # 文档更新日志
 
+## 2026-08-10
+
+#### 新增接口/事件文档
+
+* [入群申请管理](/develop/api-v2/server-inter/group/manage/join-request)：新增入群申请列表拉取和审批接口
+* [群禁言管理](/develop/api-v2/server-inter/group/manage/mute)：新增群禁言状态查询和成员禁言设置接口
+* [入群自动审批策略](/develop/api-v2/server-inter/group/manage/join-approval-strategy)：新增策略查询、创建、修改、删除、执行和白名单管理接口
+* [群管理事件](/develop/api-v2/server-inter/group/manage/event)：新增 `GROUP_JOIN_REQUEST` 用户申请加群事件
+
+#### 修改接口文档
+
+* 接口调用域名统一为 `api.bot.qq.com`，WebSocket 接入地址统一为 `wss://api.bot.qq.com/websocket/`
+* [消息发送](/develop/api-v2/server-inter/message/send-receive/send)：新增 `force_verify_image_resource` 参数，群消息移除 Ark 类型说明，补充单聊消息频率适用范围
+* [分片上传](/develop/api-v2/server-inter/message/send-receive/chunked-upload)：准备上传所需的文件信息与校验字段调整为必填，补充群文件大小限制
+* [获取群基本信息](/develop/api-v2/server-inter/group/manage/get-group-info)、[获取机器人群内状态](/develop/api-v2/server-inter/group/manage/get-bot-state)：移除内邀说明并将频率限制调整为 `30 QPM`
+
 ## 2026-07-24
 
 #### 新增概述文档

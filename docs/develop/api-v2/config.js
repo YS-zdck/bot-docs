@@ -123,6 +123,9 @@ module.exports = {
                 "children": [
                   "server-inter/group/manage/get-group-info.md",
                   "server-inter/group/manage/get-bot-state.md",
+                  "server-inter/group/manage/join-request.md",
+                  "server-inter/group/manage/mute.md",
+                  "server-inter/group/manage/join-approval-strategy.md",
                   "server-inter/group/manage/event.md",
                   "server-inter/group/manage/get-member.md",
                 ]

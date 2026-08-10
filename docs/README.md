@@ -353,8 +353,8 @@ QQ 机器人通过开放的平台承载机器人的定制化功能，让开发�
 IP白名单功能启用之后，开放平台将会在正式环境对开发者的部署IP进行限制：只有白名单IP才能连接websocket和调用OPENAPI的接口。当前IP白名单只作用于正式环境，不影响机器人在沙箱环境的使用。接口域名如下：
 
 
-- **获取调用凭证**：https://bots.qq.com/app/getAppAccessToken 不区分正式环境、沙箱环境
-- **正式环境**：https://api.sgroup.qq.com/
+- **获取调用凭证**：https://api.bot.qq.com/app/getAppAccessToken
+- **接口调用域名**：https://api.bot.qq.com/
 - **沙箱环境**：https://sandbox.api.sgroup.qq.com  沙箱环境地址只会收到在开发者平台配置的沙箱频道、沙箱私信QQ号、沙箱群、沙箱单聊QQ号的事件，且调用openapi仅能操作沙箱环境
 
 

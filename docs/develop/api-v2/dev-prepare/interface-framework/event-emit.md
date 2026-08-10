@@ -165,7 +165,7 @@ body: {"plain_token": "Arq0D5A61EgUu4OxUvOp","signature": "87befc99c42c651b3aac0
 会得到一个类似下面这样的地址：
 
 ```
-wss://api.sgroup.qq.com/websocket/
+wss://api.bot.qq.com/websocket/
 ```
 
 然后进行  `websocket` 长连接建立，一旦连接成功，就会返回 [OpCode 10 Hello](opcode.md) 消息。这个消息主要的内容是心跳周期，单位毫秒(milliseconds)，如下：
@@ -374,7 +374,7 @@ PUBLIC_GUILD_MESSAGES (1 << 30) // 消息事件，此为公域的消息事件
 
 ```json
 {
-  "url": "wss://sandbox.api.sgroup.qq.com/websocket",
+  "url": "wss://api.bot.qq.com/websocket",
   "shards": 1,
   "session_start_limit": {
     "total": 1000,
