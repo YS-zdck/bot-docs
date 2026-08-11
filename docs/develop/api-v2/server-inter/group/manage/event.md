@@ -203,7 +203,7 @@
 	</tr>
   <tr>
     <td>intents</td>
-    <td>1<<24</td>
+    <td>GROUP_MEMBER_EVENT (1&lt;&lt;24)</td>
 	</tr>
   <tr>
     <td>事件类型</td>
@@ -251,7 +251,7 @@
 	</tr>
   <tr>
     <td>intents</td>
-    <td>1<<24</td>
+    <td>GROUP_MEMBER_EVENT (1&lt;&lt;24)</td>
 	</tr>
   <tr>
     <td>事件类型</td>
@@ -359,4 +359,3 @@
   }
 }
 ```
-

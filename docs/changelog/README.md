@@ -4,6 +4,13 @@ sidebar: auto
 
 # 文档更新日志
 
+## 2026-08-11
+
+#### 修改接口/事件文档
+
+* [入群申请管理](/develop/api-v2/server-inter/group/manage/join-request)：明确 `reject_reason` 在 `op=decline` 时可填写
+* [群管理事件](/develop/api-v2/server-inter/group/manage/event)：明确 `GROUP_MEMBER_ADD` 和 `GROUP_MEMBER_REMOVE` 归属于 `GROUP_MEMBER_EVENT (1<<24)` Intent
+
 ## 2026-08-10
 
 #### 新增接口/事件文档
