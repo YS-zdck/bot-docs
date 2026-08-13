@@ -46,10 +46,18 @@
 | content | string | 文本消息内容 |
 | timestamp | string | 消息生产时间（RFC3339） |
 | attachments | object[] | 富媒体文件附件，文件类型："图片，语音，视频，文件" |
+| message_scene | MessageScene | 消息场景扩展信息 |
 author对象
 | **属性** | **类型** | **说明** |
 | --- | --- | --- |
 | user_openid | string | 用户 openid |
+
+MessageScene 对象
+
+| **属性** | **类型** | **说明** |
+| --- | --- | --- |
+| ext | object[] | 消息扩展字段列表，其中 `msg_idx` 可作为引用非机器人消息时的 `message_reference.message_id` |
+
 attachment对象
 | **属性** | **类型** | **说明** |
 | --- | --- | --- |
@@ -125,6 +133,7 @@ attachment对象
 | timestamp | string | 消息生产时间（RFC3339） |
 | group_openid | string | 群聊的 openid |
 | attachments | object[] | 富媒体文件附件，文件类型："图片，语音，视频，文件"|
+| message_scene | MessageScene | 消息场景扩展信息，`ext[].msg_idx` 可用于引用该消息 |
 
 author对象
 | **属性** | **类型** | **说明** |

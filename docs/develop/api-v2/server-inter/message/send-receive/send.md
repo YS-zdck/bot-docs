@@ -101,7 +101,7 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 | ark | object | 否 | [Ark](../type/ark.md#数据结构与协议)对象，`msg_type=3` 时使用，需要申请对应权限 |
 | media | object | 否 | 富媒体对象，`msg_type=7` 时使用，`file_info` 来自单聊富媒体上传接口 |
 | input_notify | object | 否 | 输入状态通知对象，仅 `msg_type=6` 时使用 |
-| message_reference | object | 否 | 【暂未支持】消息引用 |
+| message_reference | MessageReference | 否 | 消息引用对象 |
 | event_id | string | 否 | 被动回复的事件 ID，与 `msg_id` 二选一，支持 `INTERACTION_CREATE`、`C2C_MSG_RECEIVE`、`FRIEND_ADD` |
 | msg_id | string | 否 | 被动回复的消息 ID，从 `C2C_MESSAGE_CREATE` 等事件的 `d.id` 获取 |
 | msg_seq | int | 否 | 回复序号，与 `msg_id` 联合使用，默认 1；相同 `msg_id + msg_seq` 重复发送会失败 |
@@ -114,6 +114,12 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 | --- | --- | --- | --- |
 | input_type | int | 是 | 输入状态类型。当前使用 `1`，表示“正在输入”。 |
 | input_second | int | 是 | 输入状态持续时间，单位为秒。例如传 `60` 表示客户端展示约 60 秒“正在输入”状态。 |
+
+- **MessageReference 对象**
+
+| **属性** | **类型** | **必填** | **说明** |
+| --- | --- | --- | --- |
+| message_id | string | 否 | 被引用消息 ID，例如 `REFIDX_xxxxxx`。非机器人消息从消息事件 `message_scene.ext` 数组的 `msg_idx` 获取；机器人自己发送的消息从发送响应 `ext_info.ref_idx` 获取 |
 
 - **输入状态通知示例**
 
@@ -138,6 +144,7 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 | --- | --- | --- |
 | id | string | 消息唯一ID |
 | timestamp | int | 发送时间 |
+| ext_info | object | 扩展信息，`ref_idx` 可用于后续引用机器人自己发送的消息 |
 
 - **常见错误码**
 - 当 msg_type = 7 时，content 字段需要填入一个值，譬如一个空格 " "，后续版本会修复该问题。
@@ -184,7 +191,7 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 | markdown | object | 否 | [Markdown](../type/markdown.md#数据结构与协议)对象，`msg_type=2` 时使用；与 `content`、`ark` 互斥 |
 | keyboard | object | 否 | [Keyboard](../trans/msg-btn.md#数据结构与协议)对象 |
 | media | object | 否 | 富媒体对象，`msg_type=7` 时使用，`file_info` 来自群聊富媒体上传接口 |
-| message_reference | object | 否 | 【暂未支持】消息引用 |
+| message_reference | MessageReference | 否 | 消息引用对象，结构与单聊相同 |
 | event_id | string | 否 | 被动回复的事件 ID，与 `msg_id` 二选一，支持 `INTERACTION_CREATE`、`GROUP_ADD_ROBOT`、`GROUP_MSG_RECEIVE` |
 | msg_id | string | 否 | 被动回复的消息 ID，从 `GROUP_AT_MESSAGE_CREATE` 等事件的 `d.id` 获取 |
 | msg_seq | int | 否 | 回复序号，与 `msg_id` 联合使用，默认 1；相同 `msg_id + msg_seq` 重复发送会失败 |
@@ -196,6 +203,7 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 | --- | --- | --- |
 | id | string | 消息唯一 ID |
 | timestamp | int | 发送时间 |
+| ext_info | object | 扩展信息，`ref_idx` 可用于后续引用机器人自己发送的消息 |
 
 - **常见错误码**
 - 当 msg_type = 7 时，content 字段需要填入一个值，譬如一个空格 " "，后续版本会修复该问题。

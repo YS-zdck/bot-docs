@@ -4,6 +4,26 @@ sidebar: auto
 
 # 文档更新日志
 
+## 2026-08-13
+
+#### 修改事件文档
+
+* [用户管理事件](/develop/api-v2/server-inter/user/manage/event)：`FRIEND_ADD` 事件新增分享链接短链 `short_code`
+
+## 2026-08-12
+
+#### 新增接口文档
+
+* [全局自定义菜单](/develop/api-v2/server-inter/message/trans/custom-menu)：新增查询和修改单聊全局菜单接口
+* [指令面板管理](/develop/api-v2/server-inter/message/trans/command-panel)：新增面板列表、创建、详情、修改、删除和关联对象管理接口
+
+#### 修改接口文档
+
+* [消息按钮](/develop/api-v2/server-inter/message/trans/msg-btn)：明确互动事件 ID 从事件包 `d.id` 获取且不包含事件名前缀
+* [消息发送](/develop/api-v2/server-inter/message/send-receive/send)：启用消息引用并补充引用索引来源
+* [撤回消息](/develop/api-v2/server-inter/message/send-receive/reset)：补充群管理员和普通成员机器人的撤回权限范围
+* [群禁言管理](/develop/api-v2/server-inter/group/manage/mute)：补充最大禁言时长为 30 天
+
 ## 2026-08-11
 
 #### 修改接口/事件文档

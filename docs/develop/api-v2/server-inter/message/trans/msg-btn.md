@@ -245,7 +245,7 @@
 
 | **属性** | **类型** | **必填** | **说明** |
 | --- | --- | --- | --- |
-| interaction_id | string | 是 | 上述事件中获得。 |
+| interaction_id | string | 是 | 从 `INTERACTION_CREATE` 事件包的 `d.id` 获取，不包含 `INTERACTION_CREATE:` 前缀 |
 
 - **请求参数**
 
