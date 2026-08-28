@@ -13,6 +13,8 @@
 
 ## 支持格式
 
+Markdown 消息支持以下原生语法。如需使用 LaTeX 数学公式，请参见 [Markdown 扩展语法](./markdown-extension.md)。
+
 ### 标题
 
 ```

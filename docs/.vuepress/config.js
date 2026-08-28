@@ -31,6 +31,14 @@ module.exports = ctx => ({
   markdown: {
     lineNumbers: true,
   },
+  extendMarkdown: md => {
+    md.use(require('@vscode/markdown-it-katex').default, {
+      throwOnError: false,
+      strict: false,
+      trust: true,
+    });
+    md.use(require('markdown-it-task-lists'), { enabled: true });
+  },
   plugins: [
     require('./plugins/plugin-active-header-links/index'),
     ['fulltext-search'],

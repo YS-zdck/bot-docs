@@ -5,8 +5,7 @@
 ### 接口
 
 ```http
-DELETE /v2/users/{user_openid}/messages/{message_id}
-```
+DELETE /v2/users/{user_openid}/messages/{message_id}```
 
 ### 功能描述
 
