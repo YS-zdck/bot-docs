@@ -1,52 +1,58 @@
 # 获取群成员详情
 
-## 功能描述
+获取指定群成员的详细信息。
 
-获取指定群聊中单个成员的详细信息，包括群昵称、角色、加入时间等。
+::: warning 权限说明
+该能力正在内邀接入中，仅白名单机器人可用。
+:::
 
 ## 接口
 
-```
-GET /v2/groups/{group_id}/members/{member_id}
-```
+| 项目 | 内容 |
+| --- | --- |
+| HTTP URL | `/v2/groups/{group_openid}/members/{member_openid}` |
+| HTTP Method | `GET` |
+| 接口频率限制 | 30 QPM |
 
 ## 路径参数
 
 | 属性 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| group_id | string | 是 | 群聊的 openid |
-| member_id | string | 是 | 群成员的 openid |
+| `group_openid` | string | 是 | 群 OpenID。 |
+| `member_openid` | string | 是 | 群成员 OpenID。 |
+
+## 请求示例
+
+```http
+GET /v2/groups/3E5D8A1F7B2C9E4D6A0F1B3C5D7E9F2A/members/7A3B9C1D5E2F4A6B8C0D1E3F5A7B9C2D
+```
 
 ## 返回参数
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
-| member_openid | string | 群成员 openid |
-| username | string | 群昵称 |
-| member_role | string | 群成员角色：owner（群主）、admin（管理员）、member（普通成员） |
-| bot | bool | 是否为机器人 |
-| joined_at | string | 加入时间，ISO 8601 格式 |
-| union_openid | string | 用户统一 openid |
+| `member_openid` | string | 成员 OpenID。 |
+| `username` | string | 用户昵称。 |
+| `member_role` | string | 群成员角色：`member`、`owner` 或 `admin`。 |
+| `bot` | boolean | 是否为机器人。 |
+| `joined_at` | string | 入群时间，RFC3339 格式。 |
+| `union_openid` | string | 用户在应用或开放平台下的统一标识，如无则为空。 |
 
 ## 返回示例
 
 ```json
 {
-  "member_openid": "id",
-  "username": "群昵称",
-  "member_role": "owner",
+  "member_openid": "7A3B9C1D5E2F4A6B8C0D1E3F5A7B9C2D",
+  "username": "小明",
+  "member_role": "admin",
   "bot": false,
-  "joined_at": "2026-03-23T14:46:25+08:00",
-  "union_openid": "id"
+  "joined_at": "2025-08-20T09:15:00+08:00",
+  "union_openid": "B4C6D8E0F2A4B6C8D0E2F4A6B8C0D2E4"
 }
 ```
 
 ## 错误码
 
-| 错误码 | 说明 |
-| --- | --- |
-| 500001 | 群聊不存在 |
-| 500002 | 群成员不存在 |
-| 500003 | 机器人不在该群聊中 |
-
-详见[错误码说明](/develop/api-v2/dev-prepare/interface-framework/error-code)
+| 错误码 | 说明 | 排查建议 |
+| --- | --- | --- |
+| `11253` | 应用无接口访问权限 | 该接口仅白名单机器人可用，请联系平台运营申请权限。 |

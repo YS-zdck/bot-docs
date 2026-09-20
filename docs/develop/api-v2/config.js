@@ -36,6 +36,7 @@ module.exports = {
             "path": "/develop/api-v2/dev-prepare/interface-framework/",
             "children": [
               "dev-prepare/interface-framework/api-use.md",
+              "dev-prepare/api-call-guide.md",
               "dev-prepare/interface-framework/event-emit.md"
             ]
           },
@@ -126,11 +127,14 @@ module.exports = {
                 "children": [
                   "server-inter/group/manage/get-group-info.md",
                   "server-inter/group/manage/get-bot-state.md",
+                  "server-inter/group/manage/get-members.md",
+                  "server-inter/group/manage/get-member.md",
+                  "server-inter/group/manage/remove-members.md",
+                  "server-inter/group/manage/member-blacklist.md",
                   "server-inter/group/manage/join-request.md",
                   "server-inter/group/manage/mute.md",
                   "server-inter/group/manage/join-approval-strategy.md",
                   "server-inter/group/manage/event.md",
-                  "server-inter/group/manage/get-member.md",
                 ]
               }
             ]

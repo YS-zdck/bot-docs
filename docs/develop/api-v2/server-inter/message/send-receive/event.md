@@ -164,43 +164,109 @@ author对象
 
 ## 群聊全量消息
 
-用户在群内发送的所有聊天消息（需群主设定允许后生效）
+当机器人开启“接收所有消息”功能后，群内每一条消息（不限于 @ 机器人）都会推送此事件。
 
-- **基本概况**
+| 项目 | 内容 |
+| --- | --- |
+| Intent | `GROUP_AND_C2C_EVENT (1<<25)` |
+| 事件类型 | `GROUP_MESSAGE_CREATE` |
+| 权限要求 | 群主授权开启接收所有消息 |
+| 推送方式 | WebSocket |
 
-<table>
-	<tr>
-	  <th colspan="2">基本</th>
-	</tr>
-	<tr>
-    <td>intents</td>
-    <td>1<<25</td>
-	</tr>
-	<tr>
-    <td>事件类型</td>
-    <td>GROUP_MESSAGE_CREATE</td>
-	</tr>
-	<tr>
-    <td>触发场景</td>
-    <td>群主设定允许机器人接收群内全部消息时，机器人接收群内所有成员发言</td>
-	</tr>
-  <tr>
-    <td>权限要求</td>
-    <td>群主授权</td>
-	</tr>
-  <tr>
-    <td>推送方式</td>
-    <td>Websocket</td>
-	</tr>
-</table>
+### 事件字段
 
-- **事件字段**
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| `id` | string | 消息 ID，可用于被动回复和撤回。 |
+| `author` | User | 发送者。 |
+| `content` | string | 消息文本内容。 |
+| `group_openid` | string | 群 OpenID。 |
+| `timestamp` | string | 消息发送时间，RFC3339 格式。 |
+| `message_type` | integer | 消息内容类型。 |
+| `message_scene` | MessageScene | 消息场景上下文。 |
+| `attachments` | MessageAttachment[] | 消息附件。 |
+| `mentions` | User[] | 消息中 @ 的用户列表。 |
+| `ark_data` | ARKData | 结构化卡片消息数据。 |
+| `msg_elements` | MsgElement[] | 消息元素列表。 |
 
-事件字段与"群聊@机器人"完全相同，仅事件类型不同。
+#### User
 
-- **事件示例**
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| `id` | string | 用户唯一标识。 |
+| `username` | string | 用户昵称。 |
+| `bot` | boolean | 是否为机器人。 |
+| `union_openid` | string | 跨应用统一用户 OpenID，可能为空。 |
+| `union_user_account` | string | 跨应用统一用户账号，可能为空。 |
+| `member_openid` | string | 群成员 OpenID。 |
+| `member_role` | string | 群内角色：`member`、`admin` 或 `owner`。 |
 
-同群聊@机器人示例。
+#### MessageScene
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| `source` | string | 场景来源，`default` 表示默认聊天窗口。 |
+| `ext` | string[] | `key=value` 格式的扩展数据，可包含 `msg_idx`、`ref_msg_idx` 和 `auth_token`。 |
+
+#### MessageAttachment
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| `url` | string | 附件下载地址。 |
+| `filename` | string | 文件名。 |
+| `width` | integer | 图片宽度。 |
+| `height` | integer | 图片高度。 |
+| `size` | integer | 文件大小，单位为字节。 |
+| `content_type` | string | MIME 类型或 `voice`、`file`。 |
+| `voice_wav_url` | string | 语音转换后的 WAV 地址。 |
+| `asr_refer_text` | string | 语音 ASR 参考结果。 |
+
+#### ARKData
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| `prompt` | string | 用户操作提示文本。 |
+| `ark_type` | string | 卡片类型标识。 |
+| `ark_name` | string | 卡片类型名称。 |
+| `fields` | object | 卡片字段。 |
+
+#### MsgElement
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| `msg_idx` | string | 消息元素索引。 |
+| `author` | User | 元素对应的消息发送者。 |
+| `message_type` | integer | `0` 文本、`3` 结构化卡片、`101` 并行消息、`102` 聊天记录、`103` 引用消息。 |
+| `content` | string | 消息正文。 |
+| `attachments` | MessageAttachment[] | 元素携带的附件。 |
+| `ark_data` | ARKData | 结构化卡片数据。 |
+| `msg_elements` | MsgElement[] | 嵌套消息元素。 |
+
+### 事件示例
+
+```json
+{
+  "id": "ROBOT1.0_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "author": {
+    "id": "A1B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4",
+    "member_openid": "A1B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4",
+    "member_role": "member",
+    "username": "小明",
+    "bot": false
+  },
+  "content": "大家早上好呀",
+  "group_openid": "B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5",
+  "message_type": 0,
+  "timestamp": "2026-07-21T08:00:00+08:00",
+  "message_scene": {
+    "source": "default",
+    "ext": [
+      "msg_idx=REFIDX_xxxxxxxxxxxxxxx==",
+      "auth_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    ]
+  }
+}
+```
 
 
 <!-- ## 🚫群聊全量消息（私域）
