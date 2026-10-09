@@ -261,7 +261,7 @@
 	</tr>
 	<tr>
     <td>触发场景</td>
-    <td>成员退出群聊时触发</td>
+    <td>群成员退出或被移出群聊时触发</td>
 	</tr>
   <tr>
     <td>权限要求</td>
@@ -277,17 +277,19 @@
 
 | **属性** | **类型** | **说明** |
 | --- | --- | --- |
-| timestamp | int | 退出的时间戳 |
-| group_openid | string | 群的 openid |
-| member_openid | string | 退出成员的 openid |
+| timestamp | int | 事件时间戳（Unix 秒） |
+| group_openid | string | 群 OpenID |
+| member_openid | string | 退出成员的 OpenID |
+| user_openid | string | 退出成员的用户 OpenID（可能为空） |
 
 - **事件示例**
 
 ```json
 {
-	"group_openid": "C9F778FE6ADF9D1D1DBE395BF744A33A",
-	"member_openid": "E4F4AEA33253A2797FB897C50B81D7ED",
-	"timestamp": 1699240426
+	"timestamp": 1784276759,
+	"group_openid": "B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5",
+	"member_openid": "C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5F6",
+	"user_openid": "C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5F6"
 }
 ```
 

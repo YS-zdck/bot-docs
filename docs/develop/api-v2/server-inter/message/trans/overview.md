@@ -12,6 +12,8 @@
 
 发送单聊或群聊消息时，可通过 `keyboard` 使用按钮模板或自定义按钮：
 
+### 模板按钮
+
 ```json
 {
   "keyboard": {
@@ -20,7 +22,48 @@
 }
 ```
 
-自定义按钮可通过 `keyboard.content.rows` 设置布局、展示内容、操作权限和点击行为，完整结构详见[消息按钮](./msg-btn.md)。
+### 自定义按钮
+
+可通过 `keyboard.content.rows` 配置布局、展示内容、操作权限和点击行为。以下是一处配置多批按钮、动态提取生成行为按钮的示例：
+
+```json
+{
+  "keyboard": {
+    "id": "keyboard_id_xxx",
+    "content": {
+      "rows": [
+        {
+          "buttons": [
+            {
+              "id": "button_1",
+              "render_data": {
+                "label": "确认",
+                "visited_label": "已确认",
+                "style": 1
+              },
+              "action": {
+                "type": 2,
+                "permission": {
+                  "type": 2,
+                  "specify_role_ids": [],
+                  "specify_user_ids": []
+                },
+                "click_limit": 1,
+                "data": "/action_confirm",
+                "at_bot_show_channel_list": false,
+                "reply": true,
+                "enter": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+自定义按钮的完整字段说明详见[消息按钮](./msg-btn.md)。
 
 ## 响应互动
 

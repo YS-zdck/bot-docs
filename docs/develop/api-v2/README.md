@@ -1,34 +1,22 @@
-# 启动接入
+# API v2
 
-## 账号注册
+本目录收录 QQ 机器人开放平台 API v2 版本的全部能力说明。
 
-QQ 机器人可以被添加到群聊或频道中进行互动，QQ 用户也可以直接与机器人单独对话。
+## 起步指南
 
-注册地址：[QQ 开放平台](https://q.qq.com/#/)
+- [启动接入](./dev-prepare/getting-started.md) — 账号注册、接入票据、SDK DEMO
+- [变更记录](./changelog.md) — 官方文档历史更新记录
 
-## 接入票据
+## 基础框架须知
 
-创建机器人后，可以在开放平台管理端获得以下接入票据：
+- [接口通信框架](./dev-prepare/interface-framework/api-use.md) — Access Token 鉴权、统一请求地址
+- [API 调用指南](./dev-prepare/api-call-guide.md) — 跨接口的通用调用规则
+- [唯一身份机制](./dev-prepare/unique-id.md) — OpenID / union_openid
+- [错误与调试](./dev-prepare/error-trace/openapi.md) — 错误码、trace_id、WebSocket 错误
 
-| 名称 | 描述 | 说明 |
-| --- | --- | --- |
-| AppID | 机器人 ID | 调用平台能力时必须使用。 |
-| AppSecret | 机器人密钥 | 用于获取 Access Token，请妥善保管。 |
+## 服务端接口
 
-::: warning 注意
-Token 鉴权方式已废弃，请使用更安全的 [Access Token 鉴权](./dev-prepare/interface-framework/api-use.md)。
-:::
-
-开发过程中如遇问题，可联系 QQ 机器人反馈助手。
-
-<img :src="$withBotBase('/images/api-231017/feedback_bot.png')" alt="QQ机器人反馈助手">
-
-## SDK DEMO
-
-以下 SDK 仅提供接入参考，具体能力以官方文档为准：
-
-- Go：[botgo](https://github.com/tencent-connect/botgo)
-- Python：[botpy](https://github.com/tencent-connect/botpy)
-- Node.js：[bot-node-sdk](https://github.com/tencent-connect/bot-node-sdk)
-
-继续阅读：[API 调用指南](./dev-prepare/api-call-guide.md)。
+- [消息相关](./server-inter/message/overview.md) — 群聊、单聊、频道消息发送与事件
+- [群聊模块](./server-inter/group/manage/README.md) — 群管理、群成员、群黑名单、入群审批
+- [用户模块](./server-inter/user/README.md) — 分享链接、好友关系、主动消息开关
+- [频道模块](./server-inter/channel/README.md) — 频道管理、成员、角色、内容、消息、私信

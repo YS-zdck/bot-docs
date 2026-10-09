@@ -11,7 +11,8 @@ module.exports = {
         "collapsable": false,
         "sidebarDepth": 2,
         "children": [
-          "",
+          "dev-prepare/getting-started.md",
+          "changelog.md"
         ]
       },
       {
@@ -109,6 +110,7 @@ module.exports = {
                   "server-inter/message/trans/msg-btn.md",
                   "server-inter/message/trans/custom-menu.md",
                   "server-inter/message/trans/command-panel.md",
+                  "server-inter/message/trans/interactions-response.md",
                 ]
               }
             ],
@@ -165,6 +167,19 @@ module.exports = {
             "sidebarDepth": 1,
             "path": "/develop/api-v2/server-inter/channel/",
             "children": [
+              {
+                "title": "频道消息",
+                "collapsable": true,
+                "sidebarDepth": 1,
+                "path": "/develop/api-v2/server-inter/channel/message/",
+                "children": [
+                  "server-inter/channel/message/send.md",
+                  "server-inter/channel/message/recall.md",
+                  "server-inter/channel/message/format.md",
+                  "server-inter/channel/message/event.md",
+                  "server-inter/channel/message/dms.md",
+                ]
+              },
               {
                 "title": "频道管理",
                 "collapsable": true,

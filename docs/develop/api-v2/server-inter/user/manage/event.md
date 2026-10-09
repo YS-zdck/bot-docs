@@ -38,7 +38,6 @@
 | openid | string | 用户 openid |
 | scene | int | 加好友场景值，详见定义 |
 | scene_param | string | 开发者自定义的回调数据（callback_data） |
-| short_code | string | 机器人分享链接的短链 code |
 
 - **场景值说明**
 
@@ -61,8 +60,7 @@
   "openid": "E4F4AEA33253A2797FB897C50B81D7ED",
   "timestamp": 1699240365,
   "scene": 1000,
-  "scene_param": "",
-  "short_code": "SHORT_CODE"
+  "scene_param": ""
 }
 ```
 

@@ -83,7 +83,7 @@
 
 | **属性** | **类型** | **必填** | **说明** |
 | --- | --- | --- | --- |
-| members | SetMemberMuteState[] | 否 | 用户禁言列表，每项通过 `op` 控制新增、更新或解除，单次不超过 10 个 |
+| members | SetMemberMuteState[] | 否 | 用户禁言列表，每项通过 `op` 控制新增、更新或解除，单次不超过 20 个 |
 
 - **SetMemberMuteState**
 

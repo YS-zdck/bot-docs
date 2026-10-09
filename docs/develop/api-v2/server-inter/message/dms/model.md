@@ -1,8 +1,3 @@
 # 私信会话对象（DMS）
 
-## DMS
-| 字段名       | 类型              | 描述           |
-| ------------ | ----------------- | ---------------|
-| guild_id | string | 私信会话关联的频道 id |
-| channel_id | string | 私信会话关联的子频道 id |
-| create_time | string | 创建私信会话时间戳 |
+内容已迁移至 [频道私信（DMS 对象小节）](../../channel/message/dms.md#dms-对象)，请点击上方链接查看最新版本。
