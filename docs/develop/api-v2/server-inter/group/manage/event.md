@@ -227,17 +227,19 @@
 
 | **属性** | **类型** | **说明** |
 | --- | --- | --- |
-| timestamp | int | 加入的时间戳 |
+| timestamp | int | 加入的时间戳（Unix 秒） |
 | group_openid | string | 群的 openid |
 | member_openid | string | 加入成员的 openid |
+| user_openid | string | 新成员的用户 OpenID（跨应用统一标识，可能为空） |
 
 - **事件示例**
 
 ```json
 {
-	"group_openid": "C9F778FE6ADF9D1D1DBE395BF744A33A",
-	"member_openid": "E4F4AEA33253A2797FB897C50B81D7ED",
-	"timestamp": 1699240248
+	"timestamp": 1784276757,
+	"group_openid": "B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5",
+	"member_openid": "C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5F6",
+	"user_openid": "C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5F6"
 }
 ```
 

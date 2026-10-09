@@ -38,14 +38,12 @@
       {
         "type": "send_message",
         "name": "帮助",
-        "send_message": "/help",
-        "align": "left"
+        "send_message": "/help"
       },
       {
         "type": "link",
         "name": "官网",
-        "link": "https://example.com",
-        "align": "right"
+        "link": "https://example.com"
       }
     ]
   }
@@ -81,7 +79,7 @@
 
 ```http
 PUT /v2/menu HTTP/1.1
-Host: api.sgroup.qq.com
+Host: api.bot.qq.com
 Authorization: QQBot ACCESS_TOKEN
 Content-Type: application/json
 
@@ -91,19 +89,16 @@ Content-Type: application/json
       {
         "type": "send_message",
         "name": "帮助",
-        "send_message": "/help",
-        "align": "left"
+        "send_message": "/help"
       },
       {
         "type": "link",
         "name": "官网",
-        "link": "https://example.com",
-        "align": "left"
+        "link": "https://example.com"
       },
       {
         "type": "menu",
         "name": "更多",
-        "align": "right",
         "sub_menu_items": [
           {
             "type": "send_message",
@@ -120,7 +115,6 @@ Content-Type: application/json
       {
         "type": "switch",
         "name": "联网搜索",
-        "align": "right",
         "switch": {
           "switch_id": "net_search",
           "default": true
@@ -170,7 +164,6 @@ Content-Type: application/json
 | send_message | string | 自动填入聊天输入框的内容，仅 `type=send_message` 时必填 |
 | link | string | 跳转地址，仅 `type=link` 时必填，必须以 `https://` 开头 |
 | switch | Switch | 开关配置，仅 `type=switch` 时必填 |
-| align | string | 一级菜单对齐方式：`left` 左对齐或 `right` 右对齐，默认 `left` |
 
 ### SubMenuItem
 
@@ -181,7 +174,7 @@ Content-Type: application/json
 | send_message | string | 自动填入聊天输入框的内容，仅 `type=send_message` 时必填 |
 | link | string | 跳转地址，仅 `type=link` 时必填，必须以 `https://` 开头 |
 
-二级菜单只支持 `send_message` 和 `link`，不支持 `menu`、`switch`、继续嵌套或单独设置 `align`。
+二级菜单只支持 `send_message` 和 `link`，不支持 `menu`、`switch` 或继续嵌套。
 
 ### Switch
 
@@ -205,3 +198,13 @@ Content-Type: application/json
 ## 菜单项行为
 
 `send_message` 只负责把文本填入输入框，用户后续发送的消息按普通单聊消息处理；`link` 只执行页面跳转；`switch` 状态通过用户消息的 `ext` 字段传递。
+
+## 修改菜单错误码
+
+| **错误码** | **说明** | **排查建议** |
+| --- | --- | --- |
+| 40030008 | URL 格式错误 | 确认 `link` 字段以 `https://` 开头 |
+| 40030013 | 超出数量限制 | 请减少请求数量，具体限制值见返回信息中的 `limit` |
+| 40030014 | 菜单类型不合法 | `menu.type` 仅支持 `switch`、`send_message`、`link`、`menu` |
+| 40030016 | 必填字段缺失 | 检查必填字段是否全部正确传入 |
+| 40030020 | 内容存在安全风险，请修改后重试 | 请检查菜单/面板内容是否包含敏感信息 |
