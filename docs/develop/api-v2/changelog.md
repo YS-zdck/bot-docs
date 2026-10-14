@@ -2,7 +2,6 @@
 
 ## 20261009
 
-### 官方变更同步
 
 - **富媒体上传**（群聊 `/v2/groups/{group_openid}/files`、单聊 `/v2/users/{user_openid}/files`）：`raw_url` 说明细化为仅分片上传合并且 file_type 为图片/视频/语音时返回；错误码 `40093001` 描述修正为 BDH 通道异常；`40093002` 修正为超过今天。
 - **全局自定义菜单**（`GET /v2/menu`、`PUT /v2/menu`）：移除 `MenuItem.align` 字段；Host 统一改为 `api.bot.qq.com`；补充 PUT 错误码 `40030008`、`40030013`、`40030014`、`40030016`、`40030020`。
