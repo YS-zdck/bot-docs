@@ -4,6 +4,22 @@ sidebar: auto
 
 # 文档更新日志
 
+## 2026-10-26
+
+#### 修改接口文档
+
+* [文本交互](/develop/api-v2/server-inter/message/trans/text-chain)：群聊场景支持 `@全部成员`（机器人需为群管理员，每个群每天仅 1 次），并补充群聊、文字子频道的 @ 能力对照表
+
+## 2026-10-21
+
+#### 新增接口文档
+
+* [素材管理](/develop/api-v2/server-inter/message/material-management)：新增图片预上传、完成上传、查询与删除接口（`/v2/media-images`），上传后可通过 `qqbot-media://` 在 Markdown 消息中引用
+
+#### 修改接口文档
+
+* [Markdown 消息](/develop/api-v2/server-inter/message/type/markdown)：图片章节补充上传到平台并使用 `qqbot-media://` 引用的说明
+
 ## 2026-08-13
 
 #### 修改事件文档

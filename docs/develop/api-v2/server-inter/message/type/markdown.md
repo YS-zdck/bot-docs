@@ -50,6 +50,10 @@ _斜体_
 ![text #208px #320px](https://resource5-1255303497.cos.ap-guangzhou.myqcloud.com/abcmouse_word_watch/markdown/building.png)
 ```
 
+:::: tip 图片上传
+若图片没有可公网访问的 URL，可以先将图片上传到平台，获取 `qqbot-media://` 引用后在 Markdown 中直接引用，无需依赖网络资源，详见[素材管理](../material-management.md)。
+::::
+
 ### 有序列表
 
 ```

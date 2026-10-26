@@ -95,6 +95,7 @@ module.exports = {
                   "server-inter/message/type/sticker.md",
                   "server-inter/message/type/ark.md",
                   "server-inter/message/type/embed.md",
+                  "server-inter/message/material-management.md",
                   "server-inter/message/type/markdown.md",
                   "server-inter/message/type/markdown-extension.md",
                 ]
