@@ -4,6 +4,17 @@ sidebar: auto
 
 # 文档更新日志
 
+## 2026-10-28
+
+#### 新增接口文档
+
+* [图文卡片消息](/develop/api-v2/server-inter/message/type/card)：新增 `msg_type=8` 图文卡片，支持群聊、单聊发送
+
+#### 修改接口文档
+
+* [消息发送](/develop/api-v2/server-inter/message/send-receive/send)：单聊、群聊接口补充 `msg_type=8` 与 `card` 参数及请求示例
+* [消息类型](/develop/api-v2/server-inter/message/type/overview)：发送消息类型与场景支持情况补充图文卡片
+
 ## 2026-10-26
 
 #### 修改接口文档

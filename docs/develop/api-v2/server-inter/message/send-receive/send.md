@@ -94,12 +94,13 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 
 | **属性** | **类型** | **必填** | **说明** |
 | --- | --- | --- | --- |
-| msg_type | int | 否 | 消息类型：0 文本，2 Markdown，3 Ark，6 输入状态通知，7 富媒体 |
+| msg_type | int | 否 | 消息类型：0 文本，2 Markdown，3 Ark，6 输入状态通知，7 富媒体，8 图文卡片 |
 | content | string | 否 | 文本内容，`msg_type=0` 时使用；填写 `markdown` 时必须为空 |
 | markdown | object | 否 | [Markdown](../type/markdown.md#数据结构与协议)对象，`msg_type=2` 时使用；与 `content`、`ark` 互斥 |
 | keyboard | object | 否 | [Keyboard](../trans/msg-btn.md#数据结构与协议)对象 |
 | ark | object | 否 | [Ark](../type/ark.md#数据结构与协议)对象，`msg_type=3` 时使用，需要申请对应权限 |
 | media | object | 否 | 富媒体对象，`msg_type=7` 时使用，`file_info` 来自单聊富媒体上传接口 |
+| card | [MessageCard](../type/card.md#messagecard-对象) | 否 | 图文卡片对象，`msg_type=8` 时必须填写 |
 | input_notify | object | 否 | 输入状态通知对象，仅 `msg_type=6` 时使用 |
 | message_reference | MessageReference | 否 | 消息引用对象 |
 | event_id | string | 否 | 被动回复的事件 ID，与 `msg_id` 二选一，支持 `INTERACTION_CREATE`、`C2C_MSG_RECEIVE`、`FRIEND_ADD` |
@@ -137,6 +138,26 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 }
 ```
 
+- **图文卡片消息示例**
+
+请求数据包
+
+```json
+{
+  "msg_type": 8,
+  "card": {
+    "type": "tuwen",
+    "content": {
+      "title": "今日天气预报",
+      "description": "深圳 多云转晴 24°C~32°C，紫外线强，注意防晒",
+      "url": "https://xxx",
+      "pic_url": "https://xx.png"
+    }
+  },
+  "msg_id": "ROBOT1.0_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "msg_seq": 1
+}
+```
 
 - **返回参数**
 
@@ -186,16 +207,41 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 
 | **属性** | **类型** | **必填** | **说明** |
 | --- | --- | --- | --- |
-| msg_type | int | 否 | 消息类型：0 文本，2 Markdown，7 富媒体；群消息不支持流式参数 |
+| msg_type | int | 否 | 消息类型：0 文本，2 Markdown，7 富媒体，8 图文卡片；群消息不支持流式参数 |
 | content | string | 否 | 文本内容，`msg_type=0` 时使用；填写 `markdown` 时必须为空 |
 | markdown | object | 否 | [Markdown](../type/markdown.md#数据结构与协议)对象，`msg_type=2` 时使用；与 `content`、`ark` 互斥 |
 | keyboard | object | 否 | [Keyboard](../trans/msg-btn.md#数据结构与协议)对象 |
 | media | object | 否 | 富媒体对象，`msg_type=7` 时使用，`file_info` 来自群聊富媒体上传接口 |
+| card | [MessageCard](../type/card.md#messagecard-对象) | 否 | 图文卡片对象，`msg_type=8` 时必须填写 |
 | message_reference | MessageReference | 否 | 消息引用对象，结构与单聊相同 |
 | event_id | string | 否 | 被动回复的事件 ID，与 `msg_id` 二选一，支持 `INTERACTION_CREATE`、`GROUP_ADD_ROBOT`、`GROUP_MSG_RECEIVE` |
 | msg_id | string | 否 | 被动回复的消息 ID，从 `GROUP_AT_MESSAGE_CREATE` 等事件的 `d.id` 获取 |
 | msg_seq | int | 否 | 回复序号，与 `msg_id` 联合使用，默认 1；相同 `msg_id + msg_seq` 重复发送会失败 |
 | force_verify_image_resource | bool | 否 | 是否校验图片转存结果。为 `true` 时，图片转存失败将返回错误且不发送消息，默认为 `false` |
+
+- **图文卡片消息示例**
+
+请求数据包
+
+```json
+{
+  "msg_type": 8,
+  "msg_id": "ROBOT1.0_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "msg_seq": 2,
+  "card": {
+    "type": "tuwen",
+    "content": {
+      "title": "iPhone 17 Pro 正式发布",
+      "description": "全新 A20 芯片 / 钛金属机身 / 支持卫星通信",
+      "url": "https://news.qq.com/rain/a/20261014A05XYZ00",
+      "pic_url": "https://inews.gtimg.com/newsapp_bt/0/xxx/1000.jpg"
+    }
+  },
+  "message_reference": {
+    "message_id": "ROBOT1.0_yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+  }
+}
+```
 
 - **返回参数**
 
