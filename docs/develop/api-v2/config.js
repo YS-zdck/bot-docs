@@ -110,6 +110,7 @@ module.exports = {
                   "server-inter/message/trans/emoji.md",
                   "server-inter/message/trans/text-chain.md",
                   "server-inter/message/trans/msg-btn.md",
+                  "server-inter/message/trans/action-bar.md",
                   "server-inter/message/trans/custom-menu.md",
                   "server-inter/message/trans/command-panel.md",
                   "server-inter/message/trans/interactions-response.md",

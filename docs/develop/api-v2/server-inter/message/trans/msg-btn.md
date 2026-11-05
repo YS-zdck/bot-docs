@@ -45,23 +45,26 @@
 
 每个 button 是一个 Json Object，具体字段如下：
 
-| **属性** | **类型** | **必填** | **说明** |
-| --- | --- | --- | --- |
-| id | string | 否 | 按钮ID：在一个keyboard消息内设置唯一 |
-| render_data.label | string | 是 | 按钮上的文字 |
-| render_data.visited_label | string | 是 | 点击后按钮的上文字 |
-| render_data.style | int | 是 | 按钮样式：0 灰色线框，1 蓝色线框 |
-| action.type | int | 是 | 设置 0 跳转按钮：http 或 小程序 客户端识别 scheme，设置 1 回调按钮：回调后台接口, data 传给后台，设置 2 指令按钮：自动在输入框插入 @bot data |
-| action.permission.type | int | 是 | 0 指定用户可操作，1 仅管理者可操作，2 所有人可操作，3 指定身份组可操作（仅频道可用） |
-| action.permission.specify_user_ids | array | 否 | 有权限的用户 id 的列表 |
-| action.permission.specify_role_ids | array | 否 | 有权限的身份组 id 的列表（仅频道可用） |
-| action.data | string | 是 | 操作相关的数据 |
-| action.reply | bool | 否 | 指令按钮可用，指令是否带引用回复本消息，默认 false。支持版本 8983 |
-| action.enter | bool | 否 | 指令按钮可用，点击按钮后直接自动发送 data，默认 false。支持版本 8983 |
+| **属性** | **类型** | **必填** | **说明**                                                                                              |
+| --- | --- | --- |-----------------------------------------------------------------------------------------------------|
+| id | string | 否 | 按钮ID：在一个keyboard消息内设置唯一                                                                             |
+| render_data.label | string | 是 | 按钮上的文字                                                                                              |
+| render_data.visited_label | string | 是 | 点击后按钮的上文字                                                                                           |
+| render_data.style | int | 是 | 按钮样式：0 灰色线框，1 蓝色线框                                                                                  |
+| action.type | int | 是 | 设置 0 跳转按钮：http 或 小程序 客户端识别 scheme，设置 1 回调按钮：回调后台接口, data 传给后台，设置 2 指令按钮：自动在输入框插入 @bot data          |
+| action.permission.type | int | 是 | 0 指定用户可操作，1 仅管理者可操作，2 所有人可操作，3 指定身份组可操作（仅频道可用）                                                      |
+| action.permission.specify_user_ids | array | 否 | 有权限的用户 id 的列表                                                                                       |
+| action.permission.specify_role_ids | array | 否 | 有权限的身份组 id 的列表（仅频道可用）                                                                               |
+| action.data | string | 是 | 操作相关的数据                                                                                             |
+| action.reply | bool | 否 | 指令按钮可用，指令是否带引用回复本消息，默认 false。支持版本 8983                                                              |
+| action.enter | bool | 否 | 指令按钮可用，点击按钮后直接自动发送 data，默认 false。支持版本 8983                                                          |
+| action.modal.content | string | 否 | 指令按钮可用，点击按钮后弹出确认框，提示内容为 content，仅支持手机端版本 |
+| action.modal.confirm_text | string | 否 | 指令按钮可用，弹出确认框，确认按钮文字为 confirm_text，最多支持4个中文字符，仅支持手机端版本                                               |
+| action.modal.cancel_text | string | 否 | 指令按钮可用，弹出确认框，取消按钮文字为 cancel_text，最多支持4个中文字符，仅支持手机端版本                                                |
 | action.anchor | int | 否 | 本字段仅在指令按钮下有效，设置后后会忽略 action.enter 配置。<br/>设置为 1 时 ，点击按钮自动唤起启手Q选图器，其他值暂无效果。<br/>（仅支持手机端版本 8983+ 的单聊场景，桌面端不支持） |
-| action.click_limit | int | 否 |【已弃用】可操作点击的次数，默认不限 |
-| action.at_bot_show_channel_list | bool | 否 |【已弃用】指令按钮可用，弹出子频道选择器，默认 false |
-| action.unsupport_tips | string | 是 | 客户端不支持本action的时候，弹出的toast文案 |
+| action.click_limit | int | 否 | 【已弃用】可操作点击的次数，默认不限                                                                                  |
+| action.at_bot_show_channel_list | bool | 否 | 【已弃用】指令按钮可用，弹出子频道选择器，默认 false                                                                       |
+| action.unsupport_tips | string | 是 | 客户端不支持本action的时候，弹出的toast文案                                                                         |
 
 示例
 ```json
