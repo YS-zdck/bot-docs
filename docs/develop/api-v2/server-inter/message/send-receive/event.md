@@ -253,10 +253,10 @@ author、mentions 列表中的用户和 MsgElement.author 使用相同的用户�
 
 #### MessageScene
 
-| 属性 | 类型 | 说明 |
-| --- | --- | --- |
-| `source` | string | 场景来源，`default` 表示默认聊天窗口。 |
-| `ext` | string[] | `key=value` 格式的扩展数据，可包含 `msg_idx`、`ref_msg_idx` 和 `auth_token`。从以 `msg_idx=` 开头的字符串中提取消息引用索引，不按对象属性读取。 |
+| 属性 | 类型 | 说明                                                                                      |
+| --- | --- |-----------------------------------------------------------------------------------------|
+| `source` | string | 场景来源，`default` 表示默认聊天窗口。                                                                |
+| `ext` | string[] | `key=value` 格式的扩展数据，可包含 `msg_idx`、`ref_msg_idx` 和 `auth_token`。`msg_idx=` 后的内容可用于发送引用消息 |
 
 #### MessageAttachment
 
