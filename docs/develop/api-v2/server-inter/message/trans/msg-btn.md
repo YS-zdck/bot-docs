@@ -41,30 +41,43 @@
 
 ## 数据结构与协议
 
-消息发送接口 keyboard 字段值是一个 Json Object {}，rows 数组的每个元素表示每一行按钮
+消息发送接口 keyboard 字段值是一个 Json Object {}，content.rows 数组的每个元素表示每一行按钮。
+
+### Keyboard 对象
+
+| **属性** | **类型** | **必填** | **说明**                                   |
+| --- | --- | --- |------------------------------------------|
+| id | string | 否 | 按钮模版 ID，与 `content` 二选一                  |
+| content | object | 否 | 自定义按钮内容，与 `id` 二选一                       |
+| content.rows | array | 否 | 按钮行列表                                    |
+| content.style | object | 否 | 整个键盘的显示样式                                |
+| content.style.font_size | string | 否 | 键盘字体大小，填写 `small` 在部分设备会显示为小按钮；不传时使用默认大小 |
+
+### Button 对象
 
 每个 button 是一个 Json Object，具体字段如下：
 
-| **属性** | **类型** | **必填** | **说明**                                                                                              |
-| --- | --- | --- |-----------------------------------------------------------------------------------------------------|
-| id | string | 否 | 按钮ID：在一个keyboard消息内设置唯一                                                                             |
-| render_data.label | string | 是 | 按钮上的文字                                                                                              |
-| render_data.visited_label | string | 是 | 点击后按钮的上文字                                                                                           |
-| render_data.style | int | 是 | 按钮样式：0 灰色线框，1 蓝色线框                                                                                  |
-| action.type | int | 是 | 设置 0 跳转按钮：http 或 小程序 客户端识别 scheme，设置 1 回调按钮：回调后台接口, data 传给后台，设置 2 指令按钮：自动在输入框插入 @bot data          |
-| action.permission.type | int | 是 | 0 指定用户可操作，1 仅管理者可操作，2 所有人可操作，3 指定身份组可操作（仅频道可用）                                                      |
-| action.permission.specify_user_ids | array | 否 | 有权限的用户 id 的列表                                                                                       |
-| action.permission.specify_role_ids | array | 否 | 有权限的身份组 id 的列表（仅频道可用）                                                                               |
-| action.data | string | 是 | 操作相关的数据                                                                                             |
-| action.reply | bool | 否 | 指令按钮可用，指令是否带引用回复本消息，默认 false。支持版本 8983                                                              |
-| action.enter | bool | 否 | 指令按钮可用，点击按钮后直接自动发送 data，默认 false。支持版本 8983                                                          |
-| action.modal.content | string | 否 | 指令按钮可用，点击按钮后弹出确认框，提示内容为 content，仅支持手机端版本 |
-| action.modal.confirm_text | string | 否 | 指令按钮可用，弹出确认框，确认按钮文字为 confirm_text，最多支持4个中文字符，仅支持手机端版本                                               |
-| action.modal.cancel_text | string | 否 | 指令按钮可用，弹出确认框，取消按钮文字为 cancel_text，最多支持4个中文字符，仅支持手机端版本                                                |
+| **属性** | **类型** | **必填** | **说明**                                                                                                       |
+| --- | --- | --- |--------------------------------------------------------------------------------------------------------------|
+| id | string | 否 | 按钮ID：在一个keyboard消息内设置唯一                                                                                      |
+| group_id | string | 否 | 按钮分组 ID，同一消息中相同 `group_id` 的按钮归为一组；仅回调按钮（`action.type=1`）有效，分组内任意一个按钮被操作后，其余按钮变灰不可点击                         |
+| render_data.label | string | 是 | 按钮上的文字                                                                                                       |
+| render_data.visited_label | string | 是 | 点击后按钮的上文字                                                                                                    |
+| render_data.style | int | 是 | 按钮样式：`0` 灰色线框，`1` 蓝色线框，`2` PC端紫色图标样式，`3` 白色背景、红色文字，`4` 蓝色背景、白色文字（除样式`0` `1` 之外，其他类型均存在一定兼容性问题）               |
+| action.type | int | 是 | 设置 0 跳转按钮：http 或 小程序 客户端识别 scheme，设置 1 回调按钮：回调后台接口, data 传给后台，设置 2 指令按钮：自动在输入框插入 @bot data                   |
+| action.permission.type | int | 是 | 0 指定用户可操作，1 仅管理者可操作，2 所有人可操作，3 指定身份组可操作（仅频道可用）                                                               |
+| action.permission.specify_user_ids | array | 否 | 有权限的用户 id 的列表                                                                                                |
+| action.permission.specify_role_ids | array | 否 | 有权限的身份组 id 的列表（仅频道可用）                                                                                        |
+| action.data | string | 是 | 操作相关的数据                                                                                                      |
+| action.reply | bool | 否 | 指令按钮可用，指令是否带引用回复本消息，默认 false。支持版本 8983                                                                       |
+| action.enter | bool | 否 | 指令按钮可用，点击按钮后直接自动发送 data，默认 false。支持版本 8983                                                                   |
+| action.modal.content | string | 否 | 指令按钮可用，点击按钮后弹出确认框，提示内容为 content，仅支持手机端版本                                                                     |
+| action.modal.confirm_text | string | 否 | 指令按钮可用，弹出确认框，确认按钮文字为 confirm_text，最多支持4个中文字符，仅支持手机端版本                                                        |
+| action.modal.cancel_text | string | 否 | 指令按钮可用，弹出确认框，取消按钮文字为 cancel_text，最多支持4个中文字符，仅支持手机端版本                                                         |
 | action.anchor | int | 否 | 本字段仅在指令按钮下有效，设置后后会忽略 action.enter 配置。<br/>设置为 1 时 ，点击按钮自动唤起启手Q选图器，其他值暂无效果。<br/>（仅支持手机端版本 8983+ 的单聊场景，桌面端不支持） |
-| action.click_limit | int | 否 | 【已弃用】可操作点击的次数，默认不限                                                                                  |
-| action.at_bot_show_channel_list | bool | 否 | 【已弃用】指令按钮可用，弹出子频道选择器，默认 false                                                                       |
-| action.unsupport_tips | string | 是 | 客户端不支持本action的时候，弹出的toast文案                                                                         |
+| action.click_limit | int | 否 | 【已弃用】可操作点击的次数，默认不限                                                                                           |
+| action.at_bot_show_channel_list | bool | 否 | 【已弃用】指令按钮可用，弹出子频道选择器，默认 false                                                                                |
+| action.unsupport_tips | string | 是 | 客户端不支持本action的时候，弹出的toast文案                                                                                  |
 
 示例
 ```json
@@ -148,6 +161,64 @@
 }
 ```
 
+### 按钮分组与字体大小
+
+`group_id` 放在按钮对象中，与 `id`、`render_data`、`action` 同级。将需要互斥选择的回调按钮设置为相同的分组 ID，不同分组分别控制。
+
+以下示例使用小号字体，两个回调按钮属于同一分组，只能从中选择一个：
+
+```json
+{
+  "keyboard": {
+    "content": {
+      "rows": [
+        {
+          "buttons": [
+            {
+              "id": "choice_a",
+              "group_id": "daily_choice",
+              "render_data": {
+                "label": "选项 A",
+                "visited_label": "已选择",
+                "style": 3
+              },
+              "action": {
+                "type": 1,
+                "permission": {
+                  "type": 2
+                },
+                "data": "choice_a",
+                "unsupport_tips": "当前客户端版本不支持此按钮"
+              }
+            },
+            {
+              "id": "choice_b",
+              "group_id": "daily_choice",
+              "render_data": {
+                "label": "选项 B",
+                "visited_label": "已选择",
+                "style": 4
+              },
+              "action": {
+                "type": 1,
+                "permission": {
+                  "type": 2
+                },
+                "data": "choice_b",
+                "unsupport_tips": "当前客户端版本不支持此按钮"
+              }
+            }
+          ]
+        }
+      ],
+      "style": {
+        "font_size": "small"
+      }
+    }
+  }
+}
+```
+
 ## 事件
 
 ### 点击回调按钮
@@ -189,6 +260,7 @@
 | channel_id | string | 文字子频道的 openid，仅在频道场景提供该字段 |
 | user_openid | string | 触发单聊按钮的用户 OpenID，仅在单聊场景提供该字段 |
 | group_openid | string | 群的 openid，仅在群聊场景提供该字段 |
+| union_group_openid | string | 群的统一 OpenID，仅群聊场景提供，可能为空 |
 | group_member_openid | string | 按钮触发用户，群聊的群成员 openid，仅在群聊场景提供该字段 |
 | data.resolved.button_data | string | 操作按钮的 data 字段值（在发送消息按钮时设置） |
 | data.resolved.button_id | string | 操作按钮的 id 字段值（在发送消息按钮时设置） |

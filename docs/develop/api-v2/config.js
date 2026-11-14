@@ -157,6 +157,7 @@ module.exports = {
                 "path": "/develop/api-v2/server-inter/user/manage/",
                 "children": [
                   "server-inter/user/share_url.md",
+                  "server-inter/user/manage/avatar.md",
                   "server-inter/user/manage/event.md",
                   "server-inter/user/manage/subscribe-message-status.md",
                 ]
