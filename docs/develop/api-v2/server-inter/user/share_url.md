@@ -37,8 +37,10 @@
 
 ```json
 {
+  "retcode": 0,
+  "msg": "success",
   "data": {
-    "url": "https://qun.qq.com/qunpro/robot/qunshare?robot_appid=1234567890&robot_uin=12345678&data=xxx"
+    "url": "https://bot.q.qq.com/s/wZxxxxxWE1"
   }
 }
 ```

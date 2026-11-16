@@ -47,16 +47,23 @@
 | timestamp | string | 消息生产时间（RFC3339） |
 | attachments | object[] | 富媒体文件附件，文件类型："图片，语音，视频，文件" |
 | message_scene | MessageScene | 消息场景扩展信息 |
+| message_type | int | 消息内容类型，示例中为 `0` |
 author对象
 | **属性** | **类型** | **说明** |
 | --- | --- | --- |
 | user_openid | string | 用户 openid |
+| id | string | 用户标识 |
+| username | string | 用户昵称 |
+| bot | bool | 是否为机器人 |
+| union_openid | string | 用户的统一 OpenID，可能为空 |
+| avatar | string | 用户头像 URL，未携带时为空 |
 
 MessageScene 对象
 
 | **属性** | **类型** | **说明** |
 | --- | --- | --- |
-| ext | object[] | 消息扩展字段列表，其中 `msg_idx` 可作为引用非机器人消息时的 `message_reference.message_id` |
+| source | string | 场景来源，示例中为 `default` |
+| ext | string[] | `key=value` 格式的扩展数据；从以 `msg_idx=` 开头的字符串中提取值，作为引用非机器人消息时的 `message_reference.message_id` |
 
 attachment对象
 | **属性** | **类型** | **说明** |
@@ -75,12 +82,24 @@ attachment对象
 
 ```json
 {
+  "id": "ROBOT1.0_iE9q-d4E3td1Wxxxxxxxxxxxxxxxxxxxxxxxx!",
+  "content": "/help",
+  "timestamp": "2026-11-14T12:00:00+08:00",
   "author": {
-      "user_openid": "E4F4AEA33253A2797FB897C50B81D7ED"
+    "id": "A0107612525E36DE67D7ABC31E462132",
+    "username": "示例用户",
+    "avatar": "https://thirdqq.qlogo.cn/bqqthird?key=fxxxxxxxxaLT8xm&kti=IYpf2bkU3sk&s=640",
+    "bot": false,
+    "user_openid": "A0107612525E36DE67D7ABC31E462132",
+    "union_openid": "A0107612525E36DE67D7ABC31E462132"
   },
-  "content": "123",
-  "id": "ROBOT1.0_.b6nx.CVryAO0nR58RXuU6SC.m92gc19j02qKqdm8ek!",
-  "timestamp": "2023-11-06T13:37:18+08:00"
+  "message_scene": {
+    "source": "default",
+    "ext": [
+      "msg_idx=REFIDX_21xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxvdtWR3M27v"
+    ]
+  },
+  "message_type": 0
 }
 ```
 
@@ -132,28 +151,53 @@ attachment对象
 | content | string | 消息内容 |
 | timestamp | string | 消息生产时间（RFC3339） |
 | group_openid | string | 群聊的 openid |
+| group_id | string | 群标识，当前示例与 `group_openid` 相同 |
+| union_group_openid | string | 群的统一 OpenID，可能为空 |
+| message_type | int | 消息内容类型，示例中为 `0` |
+| mentions | User[] | 消息中 @ 的用户，结构见下文 [User](#user) |
 | attachments | object[] | 富媒体文件附件，文件类型："图片，语音，视频，文件"|
-| message_scene | MessageScene | 消息场景扩展信息，`ext[].msg_idx` 可用于引用该消息 |
+| message_scene | MessageScene | 消息场景扩展信息，结构见下文 [MessageScene](#messagescene) |
 
 author对象
 | **属性** | **类型** | **说明** |
 | --- | --- | --- |
 | member_openid | string | 用户在本群的 member_openid |
+| id | string | 用户标识 |
+| username | string | 用户昵称 |
+| union_openid | string | 用户的统一 OpenID，可能为空 |
 | member_role | string | 消息发送者在群内的身份，枚举：owner、admin、member |
 | bot | bool | 是否是机器人 |
+| avatar | string | 用户头像 URL，未携带时为空 |
+| member_nickname | string | 用户在当前群的昵称，未携带时为空 |
 
 - **事件示例**
 
 ```json
-// Websocket
 {
+  "id": "ROBOT1.0_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx!",
+  "content": " /question ",
+  "timestamp": "2026-11-14T12:00:00+08:00",
   "author": {
-      "member_openid": "E4F4AEA33253A2797FB897C50B81D7ED"
+    "id": "A366F700D7DF8AD71E04F5F87FA8CBF7",
+    "username": "示例用户",
+    "avatar": "https://thirdqq.qlogo.cn/bqqthird?key=fQxxKo3qFBfxxxxxxxxxxhTzQHQxxxxxxx&kti=Ixxxxk&s=640",
+    "bot": false,
+    "member_openid": "A366F700D7DF8AD71E04F5F87FA8CBF7",
+    "member_role": "member",
+    "member_nickname": "示例群昵称",
+    "union_openid": "A366F700D7DF8AD71E04F5F87FA8CBF7"
   },
-  "content": " 123",
-  "group_openid": "C9F778FE6ADF9D1D1DBE395BF744A33A",
-  "id": "ROBOT1.0_eBIyWnxpmSu6uLQ7u7fU0eGloKGYg4eEa737vRyKnMCgyZjKi7JLYkQ9B0VapbiY",
-  "timestamp": "2023-11-06T13:37:18+08:00"
+  "group_id": "A44E8413A363E09453BD414E320D3494",
+  "group_openid": "A44E8413A363E09453BD414E320D3494",
+  "message_scene": {
+    "source": "default",
+    "ext": [
+      "msg_idx=REFIDX_vzTx3Ftwxxxxxxxxxxxxxxxxxxxv8F",
+      "auth_token=n6EGkt9LV_MOPsTPwyrYxxxxxxxxxxxxxxxxxxxxxxxxxxxCvkJoak-zccVP5sk24ncpvng"
+    ]
+  },
+  "message_type": 0,
+  "union_group_openid": "A44E8413A363E09453BD414E320D3494"
 }
 ```
 
@@ -181,6 +225,8 @@ author对象
 | `author` | User | 发送者。 |
 | `content` | string | 消息文本内容。 |
 | `group_openid` | string | 群 OpenID。 |
+| `group_id` | string | 群标识，当前示例与 `group_openid` 相同。 |
+| `union_group_openid` | string | 群的统一 OpenID，可能为空 |
 | `timestamp` | string | 消息发送时间，RFC3339 格式。 |
 | `message_type` | integer | 消息内容类型。 |
 | `message_scene` | MessageScene | 消息场景上下文。 |
@@ -191,10 +237,14 @@ author对象
 
 #### User
 
+author、mentions 列表中的用户和 MsgElement.author 使用相同的用户结构。`username` 为用户昵称，`member_nickname` 为用户在当前群的昵称，二者分别读取；头像和群昵称未携带时按空值处理。
+
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | `id` | string | 用户唯一标识。 |
 | `username` | string | 用户昵称。 |
+| `avatar` | string | 用户头像 URL，未携带时为空。 |
+| `member_nickname` | string | 用户在当前群的昵称，未携带时为空。 |
 | `bot` | boolean | 是否为机器人。 |
 | `union_openid` | string | 跨应用统一用户 OpenID，可能为空。 |
 | `union_user_account` | string | 跨应用统一用户账号，可能为空。 |
@@ -203,10 +253,10 @@ author对象
 
 #### MessageScene
 
-| 属性 | 类型 | 说明 |
-| --- | --- | --- |
-| `source` | string | 场景来源，`default` 表示默认聊天窗口。 |
-| `ext` | string[] | `key=value` 格式的扩展数据，可包含 `msg_idx`、`ref_msg_idx` 和 `auth_token`。 |
+| 属性 | 类型 | 说明                                                                                      |
+| --- | --- |-----------------------------------------------------------------------------------------|
+| `source` | string | 场景来源，`default` 表示默认聊天窗口。                                                                |
+| `ext` | string[] | `key=value` 格式的扩展数据，可包含 `msg_idx`、`ref_msg_idx` 和 `auth_token`。`msg_idx=` 后的内容可用于发送引用消息 |
 
 #### MessageAttachment
 
@@ -246,25 +296,30 @@ author对象
 
 ```json
 {
-  "id": "ROBOT1.0_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "id": "ROBOT1.0_RwLo4siPGRLmFmOMf-F1OfRKLr-9xamDXzZoSKLJYjAI2Pye1Y9UhN4Pj97rUyozKVrQ9sDdS2wP6.04IflytYu78Fgt5qVScdpADJLk8IxONzC5eg7Phb-OrkHpn658iURvmDH47LUVxwXpuAa8YrsSjTxQdJWeOVUL9S3du0!",
+  "content": "这是一条群消息",
+  "timestamp": "2026-11-14T12:00:00+08:00",
   "author": {
-    "id": "A1B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4",
-    "member_openid": "A1B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4",
+    "id": "B161B8AFE079273331724FC7698B4959",
+    "username": "示例用户",
+    "avatar": "https://thirdqq.qlogo.cn/bqqthird?key=fQsheIyUKo3qFBfqyE84pOjNrrC9GWzObJW38AQwVvMSvKAhSrGff0QL0e2rGkU2uCBhTzQHQAaLT8xm&kti=IYpf2bkU3sk&s=640",
+    "bot": false,
+    "member_openid": "B161B8AFE079273331724FC7698B4959",
     "member_role": "member",
-    "username": "小明",
-    "bot": false
+    "member_nickname": "示例群昵称",
+    "union_openid": "B161B8AFE079273331724FC7698B4959"
   },
-  "content": "大家早上好呀",
-  "group_openid": "B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5",
-  "message_type": 0,
-  "timestamp": "2026-07-21T08:00:00+08:00",
+  "group_id": "232BC9C95C07E3F0AADEA447DFFDC787",
+  "group_openid": "232BC9C95C07E3F0AADEA447DFFDC787",
   "message_scene": {
     "source": "default",
     "ext": [
-      "msg_idx=REFIDX_xxxxxxxxxxxxxxx==",
-      "auth_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      "msg_idx=REFIDX_5W1s5zsDsx7rR4kJWmJuv/dgJLL076akADAGFbCIuCK9MICZ4MjSuAom/rPEXPlKpTkv9QmQId6WI933g3WumJGqkFhQclROgMEmQhfmPVVrYNyqeZn1+1USvRFun5yM",
+      "auth_token=XzdsjeOB8F9emFvJDR_D7USqV1iAIh5Hlq_ferSr9r6xJMr9ZYF5OBDMRMnpIFc8B-dEuRYrDtscS27uT1SWbvezsRdLHCbrK7zZJG_kmSj1xc7RPhluCVLI84FJGosx"
     ]
-  }
+  },
+  "message_type": 0,
+  "union_group_openid": "232BC9C95C07E3F0AADEA447DFFDC787"
 }
 ```
 

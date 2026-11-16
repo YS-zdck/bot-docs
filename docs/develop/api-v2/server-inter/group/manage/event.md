@@ -1,5 +1,7 @@
 # 事件
 
+以下事件字段和示例均对应事件包中的 `d` 对象，不包含外层的 `op`、`id`、`t`。示例已替换用户、群、消息标识、昵称、头像参数和消息凭据；示例值均为虚构，不能用于实际接口调用。
+
 ## 机器人加入群聊
 
 - **基本概况**
@@ -34,17 +36,19 @@
 
 | **属性** | **类型** | **说明** |
 | --- | --- | --- |
-| timestamp | int | 加入的时间戳 |
+| timestamp | int | 加入时间戳（Unix 秒） |
 | group_openid | string | 加入群的群openid |
+| union_group_openid | string | 群的统一 OpenID，可能为空 |
 | op_member_openid | string | 操作添加机器人进群的群成员openid |
 
 - **事件示例**
 
 ```json
 {
-	"group_openid": "C9F778FE6ADF9D1D1DBE395BF744A33A",
-	"op_member_openid": "E4F4AEA33253A2797FB897C50B81D7ED",
-	"timestamp": 1699240248
+  "timestamp": 1794628860,
+  "group_openid": "A4D76CB596E0E0DE0638192122327AE9",
+  "op_member_openid": "D3F1C5C7C7BC16E0C2734A9BCD26719C",
+  "union_group_openid": "A4D76CB596E0E0DE0638192122327AE9"
 }
 ```
 
@@ -66,7 +70,7 @@
 	</tr>
 	<tr>
     <td>触发场景</td>
-    <td>机器人被移出群聊</td>
+    <td>机器人被移出群聊或所在群解散</td>
 	</tr>
   <tr>
     <td>权限要求</td>
@@ -82,22 +86,29 @@
 
 | **属性** | **类型** | **说明** |
 | --- | --- | --- |
-| timestamp | int | 移除的时间戳 |
+| timestamp | int | 退出时间戳（Unix 秒） |
 | group_openid | string | 移除群的群openid |
-| op_member_openid | string | 操作移除机器人退群的群成员openid |
+| union_group_openid | string | 群的统一 OpenID，可能为空 |
+| op_member_openid | string | 操作移除机器人的群成员 OpenID，可能不携带 |
+| dismiss | bool | 群解散标记，`true` 表示所在群已解散 |
 
 - **事件示例**
 
 ```json
 {
-	"group_openid": "C9F778FE6ADF9D1D1DBE395BF744A33A",
-	"op_member_openid": "E4F4AEA33253A2797FB897C50B81D7ED",
-	"timestamp": 1699240426
+  "timestamp": 1794628920,
+  "group_openid": "04348AB2D18D71752CA5E6B53345BB1C",
+  "dismiss": true,
+  "union_group_openid": "04348AB2D18D71752CA5E6B53345BB1C"
 }
 ```
 
 
 ## 群聊拒绝机器人主动消息
+
+::: warning 情况说明
+此事件已弃用
+:::
 
 - **基本概况**
 
@@ -147,6 +158,10 @@
 
 ## 群聊接受机器人主动消息
 
+::: warning 情况说明
+此事件已弃用
+:::
+
 - **基本概况**
 
 <table>
@@ -181,6 +196,7 @@
 | --- | --- | --- |
 | timestamp | int | 操作的时间戳 |
 | group_openid | string | 操作群的群openid |
+| union_group_openid | string | 群的统一 OpenID，可能为空 |
 | op_member_openid | string | 操作群成员的openid |
 
 - **事件示例**
@@ -188,6 +204,7 @@
 ```json
 {
 	"group_openid": "C9F778FE6ADF9D1D1DBE395BF744A33A",
+	"union_group_openid": "C9F778FE6ADF9D1D1DBE395BF744A33A",
 	"op_member_openid": "E4F4AEA33253A2797FB897C50B81D7ED",
 	"timestamp": 1699240477
 }
@@ -229,17 +246,20 @@
 | --- | --- | --- |
 | timestamp | int | 加入的时间戳（Unix 秒） |
 | group_openid | string | 群的 openid |
+| union_group_openid | string | 群的统一 OpenID，可能为空 |
 | member_openid | string | 加入成员的 openid |
-| user_openid | string | 新成员的用户 OpenID（跨应用统一标识，可能为空） |
+| union_openid | string | 成员的统一 OpenID，可能为空 |
+| user_openid | string | 部分事件可能携带的用户 OpenID，本次实际事件未携带 |
 
 - **事件示例**
 
 ```json
 {
-	"timestamp": 1784276757,
-	"group_openid": "B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5",
-	"member_openid": "C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5F6",
-	"user_openid": "C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5F6"
+  "timestamp": 1794628980,
+  "group_openid": "C271469CA216299B29AF9F5822E96056",
+  "member_openid": "994513137D78776272384F6FE107D389",
+  "union_group_openid": "C271469CA216299B29AF9F5822E96056",
+  "union_openid": "994513137D78776272384F6FE107D389"
 }
 ```
 
@@ -279,17 +299,20 @@
 | --- | --- | --- |
 | timestamp | int | 事件时间戳（Unix 秒） |
 | group_openid | string | 群 OpenID |
+| union_group_openid | string | 群的统一 OpenID，可能为空 |
 | member_openid | string | 退出成员的 OpenID |
-| user_openid | string | 退出成员的用户 OpenID（可能为空） |
+| union_openid | string | 成员的统一 OpenID，可能为空 |
+| user_openid | string | 部分事件可能携带的用户 OpenID，本次实际事件未携带 |
 
 - **事件示例**
 
 ```json
 {
-	"timestamp": 1784276759,
-	"group_openid": "B2C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5",
-	"member_openid": "C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5F6",
-	"user_openid": "C3D4E5F6A1B2C3D4E5F6A1B2C3D4E5F6"
+  "timestamp": 1794629040,
+  "group_openid": "30BC011D1946A8C83C95DB2584AC78B5",
+  "member_openid": "91D4608F75F54E72A42558A7525F89FA",
+  "union_group_openid": "30BC011D1946A8C83C95DB2584AC78B5",
+  "union_openid": "91D4608F75F54E72A42558A7525F89FA"
 }
 ```
 
