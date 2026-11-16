@@ -4,6 +4,18 @@ sidebar: auto
 
 # 文档更新日志
 
+## 2026-11-16
+
+#### 新增接口文档
+
+* [获取用户基本信息](/develop/api-v2/server-inter/user/manage/get-user-info)：新增 `GET /v2/users/{user_openid}/info`，返回昵称、头像及是否接收主动推送
+
+#### 修改接口文档
+
+* [消息事件](/develop/api-v2/server-inter/message/send-receive/event)：群消息 `mentions` 调整为 `GroupMentionsUser[]`，新增 `is_you`、`scope`、`member_nickname` 等字段
+* [获取群基本信息](/develop/api-v2/server-inter/group/manage/get-group-info)：新增 `union_group_openid` 返回字段
+* [群成员批量移除](/develop/api-v2/server-inter/group/manage/remove-members)：移除 `add_to_member_blacklist` 参数与内邀限制，新增错误码 `40103011`、`40103012`
+
 ## 2026-11-14
 
 - 修正了文档大部分的历史遗留问题

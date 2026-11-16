@@ -38,6 +38,7 @@
 | group_class_text | string | 群分类 |
 | group_tags | string[] | 群标签列表 |
 | group_member_num | int | 群成员人数 |
+| union_group_openid | string | 跨应用关联群 openid，当绑定了 3 方应用时有效 |
 
 - **请求示例**
 
@@ -58,6 +59,7 @@ GET /v2/groups/3E5D8A1F7B2C9E4D6A0F1B3C5D7E9F2A/info
     "文学",
     "成长"
   ],
-  "group_member_num": 256
+  "group_member_num": 256,
+  "union_group_openid": "A44E8413A363E09453BD414E320D3494"
 }
 ```

@@ -1,9 +1,9 @@
 # 群成员批量移除
 
-批量移除群成员，单次最多处理 20 个成员，可选择同时加入群黑名单。
+批量移除群成员，单次最多处理 20 个成员 openid。
 
-::: warning 权限说明
-该能力正在内邀接入中，仅白名单机器人可用。
+::: tip 权限说明
+机器人需在 WEB 管理端开启「移除群成员」开关，并由群主为机器人开启该操作权限；未开启时接口分别返回 `40103011`、`40103012`。
 :::
 
 ## 接口
@@ -25,7 +25,6 @@
 | 属性 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | `member_openids` | string[] | 是 | 需要移除的成员 OpenID，单次最多 20 个。 |
-| `add_to_member_blacklist` | boolean | 否 | 是否同时加入群黑名单，默认 `false`。 |
 
 ## 请求示例
 
@@ -33,8 +32,7 @@
 {
   "member_openids": [
     "7A3B9C1D5E2F4A6B8C0D1E3F5A7B9C2D"
-  ],
-  "add_to_member_blacklist": true
+  ]
 }
 ```
 
@@ -43,14 +41,12 @@
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | `remove_members_result` | string | 成功时返回 `success`。 |
-| `add_to_member_blacklist_fail_openids` | string[] | 加入黑名单失败的成员 OpenID。 |
 
 ## 返回示例
 
 ```json
 {
-  "remove_members_result": "success",
-  "add_to_member_blacklist_fail_openids": []
+  "remove_members_result": "success"
 }
 ```
 
@@ -58,4 +54,5 @@
 
 | 错误码 | 说明 | 排查建议 |
 | --- | --- | --- |
-| `11253` | 应用无接口访问权限 | 该接口仅白名单机器人可用，请联系平台运营申请权限。 |
+| `40103011` | 机器人已关闭操作权限 | 到 WEB 管理端为机器人打开「移除群成员」开关。 |
+| `40103012` | 群主已关闭操作权限 | 需要群主为机器人打开「移除群成员」权限开关。 |

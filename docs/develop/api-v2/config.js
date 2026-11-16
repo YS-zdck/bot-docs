@@ -158,6 +158,7 @@ module.exports = {
                 "children": [
                   "server-inter/user/share_url.md",
                   "server-inter/user/manage/avatar.md",
+                  "server-inter/user/manage/get-user-info.md",
                   "server-inter/user/manage/event.md",
                   "server-inter/user/manage/subscribe-message-status.md",
                 ]

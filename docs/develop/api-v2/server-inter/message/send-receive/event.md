@@ -154,7 +154,7 @@ attachment对象
 | group_id | string | 群标识，当前示例与 `group_openid` 相同 |
 | union_group_openid | string | 群的统一 OpenID，可能为空 |
 | message_type | int | 消息内容类型，示例中为 `0` |
-| mentions | User[] | 消息中 @ 的用户，结构见下文 [User](#user) |
+| mentions | GroupMentionsUser[] | 消息中 @ 的用户（不含 @ 机器人自身），结构见下文 [GroupMentionsUser](#groupmentionsuser) |
 | attachments | object[] | 富媒体文件附件，文件类型："图片，语音，视频，文件"|
 | message_scene | MessageScene | 消息场景扩展信息，结构见下文 [MessageScene](#messagescene) |
 
@@ -231,13 +231,13 @@ author对象
 | `message_type` | integer | 消息内容类型。 |
 | `message_scene` | MessageScene | 消息场景上下文。 |
 | `attachments` | MessageAttachment[] | 消息附件。 |
-| `mentions` | User[] | 消息中 @ 的用户列表。 |
+| `mentions` | GroupMentionsUser[] | 消息中 @ 的用户列表。 |
 | `ark_data` | ARKData | 结构化卡片消息数据。 |
 | `msg_elements` | MsgElement[] | 消息元素列表。 |
 
 #### User
 
-author、mentions 列表中的用户和 MsgElement.author 使用相同的用户结构。`username` 为用户昵称，`member_nickname` 为用户在当前群的昵称，二者分别读取；头像和群昵称未携带时按空值处理。
+事件字段中的 `author` 以及 `MsgElement.author` 使用该用户结构。`username` 为用户昵称，`member_nickname` 为用户在当前群的昵称，二者分别读取；头像和群昵称未携带时按空值处理。
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -246,10 +246,24 @@ author、mentions 列表中的用户和 MsgElement.author 使用相同的用户�
 | `avatar` | string | 用户头像 URL，未携带时为空。 |
 | `member_nickname` | string | 用户在当前群的昵称，未携带时为空。 |
 | `bot` | boolean | 是否为机器人。 |
-| `union_openid` | string | 跨应用统一用户 OpenID，可能为空。 |
-| `union_user_account` | string | 跨应用统一用户账号，可能为空。 |
+| `union_openid` | string | 跨应用关联用户 openid，当绑定了 3 方应用时有效。 |
 | `member_openid` | string | 群成员 OpenID。 |
 | `member_role` | string | 群内角色：`member`、`admin` 或 `owner`。 |
+
+#### GroupMentionsUser
+
+群消息事件的 `mentions` 列表中，被 @ 的用户使用该结构：
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| `id` | string | 用户唯一标识（OpenID 格式）。 |
+| `username` | string | 用户昵称。 |
+| `bot` | boolean | 是否为机器人。 |
+| `member_openid` | string | 群成员 OpenID。 |
+| `member_role` | string | 群内角色：`member`、`admin` 或 `owner`。 |
+| `is_you` | boolean | 是否是 @ 的当前机器人。 |
+| `scope` | string | `all`：@ 全体成员；`single`：指定 @ 对象。 |
+| `member_nickname` | string | 用户在群内的昵称。 |
 
 #### MessageScene
 
