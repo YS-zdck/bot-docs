@@ -4,6 +4,13 @@ sidebar: auto
 
 # 文档更新日志
 
+## 2026-11-17
+
+#### 修改接口文档
+
+* [消息发送](/develop/api-v2/server-inter/message/send-receive/send)：群聊被动回复有效期由 5 分钟延长至 60 分钟，开发者是群主或管理员时每条消息回复上限提升至 50 次；单聊、群聊 `msg_id` 补充群消息私聊回复用法
+* [消息概述](/develop/api-v2/server-inter/message/overview)：被动消息时效与次数表同步群聊调整，补充群消息私聊回复规则
+
 ## 2026-11-16
 
 #### 新增接口文档

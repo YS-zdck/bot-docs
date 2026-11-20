@@ -6,7 +6,7 @@
     <div class="title bottom">加入官方频道开发者社区</div>
     <div class="unofficial-group">
       <span class="warn">⚠️</span> 非官方交流群<br/>
-      <code>367239358</code>
+      <code>1136794599</code>
       <div class="tip">进群请填写机器人 AppID</div>
     </div>
   </div>

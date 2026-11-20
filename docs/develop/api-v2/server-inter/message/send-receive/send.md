@@ -40,7 +40,8 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 - 群聊
   - 主动消息 Bot 维度频控：企业认证、个人认证开发者为 `60 QPM`；未认证开发者为 `30 QPM`。
   - 单群维度频控为 `20 QPM`，每个群每天最多接收 `1000 条`主动消息。
-  - 被动消息（回复类）有效时间为 `5 分钟`，每个消息最多回复 `5 次`，超时或超频会发送（回复）失败；
+  - 被动消息（回复类）有效时间为 `60 分钟`，每个消息最多回复 `5 次`；机器人开发者（机器人账号的管理员）为该群群主或管理员时，每个消息最多回复 `50 次`。超时或超频会发送（回复）失败；
+  - 群消息支持通过单聊私聊回复：使用群消息的 `msg_id` 调用[发送单聊消息](#单聊)接口，可私聊回复该群消息的发送者，要求该用户与机器人为好友关系。有效期按群消息计算，回复次数与群内回复共用同一个 `msg_id` 的上限；
 - 文字子频道
   - 主动消息在频道主或管理设置了情况下，按设置的数量进行限频。在未设置的情况遵循如下限制:
     - 主动推送消息，默认每天往每个子频道可推送的消息数是 `20` 条，超过会被限制。
@@ -102,7 +103,7 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 | input_notify | object | 否 | 输入状态通知对象，仅 `msg_type=6` 时使用 |
 | message_reference | MessageReference | 否 | 消息引用对象 |
 | event_id | string | 否 | 被动回复的事件 ID，与 `msg_id` 二选一，支持 `INTERACTION_CREATE`、`C2C_MSG_RECEIVE`、`FRIEND_ADD` |
-| msg_id | string | 否 | 被动回复的消息 ID，从 `C2C_MESSAGE_CREATE` 等事件的 `d.id` 获取 |
+| msg_id | string | 否 | 被动回复的消息 ID，从 `C2C_MESSAGE_CREATE` 等事件的 `d.id` 获取；也可传 `GROUP_AT_MESSAGE_CREATE`、`GROUP_MESSAGE_CREATE` 事件的 `d.id`，私聊回复该群消息的发送者，要求为好友关系，有效期与次数按群消息规则计算 |
 | msg_seq | int | 否 | 回复序号，与 `msg_id` 联合使用，默认 1；相同 `msg_id + msg_seq` 重复发送会失败 |
 | is_wakeup | bool | 否 | 互动召回消息标记，与 msg_id、event_id 互斥 |
 | force_verify_image_resource | bool | 否 | 是否校验图片转存结果。为 `true` 时，图片转存失败将返回错误且不发送消息，默认为 `false` |
@@ -213,7 +214,7 @@ QQ 用户可以在 QQ 客户端主动设置是否接收机器人发送的主动�
 | card | [MessageCard](../type/card.md#messagecard-对象) | 否 | 图文卡片对象，`msg_type=8` 时必须填写 |
 | message_reference | MessageReference | 否 | 消息引用对象，结构与单聊相同 |
 | event_id | string | 否 | 被动回复的事件 ID，与 `msg_id` 二选一，支持 `INTERACTION_CREATE`、`GROUP_ADD_ROBOT`、`GROUP_MSG_RECEIVE` |
-| msg_id | string | 否 | 被动回复的消息 ID，从 `GROUP_AT_MESSAGE_CREATE` 等事件的 `d.id` 获取 |
+| msg_id | string | 否 | 被动回复的消息 ID，从 `GROUP_AT_MESSAGE_CREATE` 等事件的 `d.id` 获取，60 分钟内有效；该 `msg_id` 也可用于[发送单聊消息](#单聊)接口，私聊回复该群消息的发送者（需为好友关系） |
 | msg_seq | int | 否 | 回复序号，与 `msg_id` 联合使用，默认 1；相同 `msg_id + msg_seq` 重复发送会失败 |
 | force_verify_image_resource | bool | 否 | 是否校验图片转存结果。为 `true` 时，图片转存失败将返回错误且不发送消息，默认为 `false` |
 
